@@ -1,0 +1,35 @@
+-------------------------------------------
+ApplicationName : PowerPoint*
+WindowMatch : StartMatch
+VolumeUpButton : n
+VolumeDownButton : p
+ConnectButton : n
+PlayButton : b
+StopButton : {ESC}
+PauseButton : b
+FFWDButton : n
+REWButton : p
+-------------------------------------------
+ApplicationName : PowerPoint Viewer
+WindowMatch : PartialMatch
+VolumeUpButton : n
+VolumeDownButton : p
+ConnectButton : n
+PlayButton : b
+StopButton : {ESC}
+PauseButton : b
+FFWDButton : n
+REWButton : p
+-------------------------------------------
+ApplicationName : Windows Media Player
+WindowMatch : PartialMatch
+VolumeUpButton : ^f
+VolumeDownButton : ^b
+ConnectButton : ^p
+PlayButton : ^p
+StopButton : ^s
+PauseButton : ^p
+FFWDButton : ^f
+REWButton : ^b
+
+

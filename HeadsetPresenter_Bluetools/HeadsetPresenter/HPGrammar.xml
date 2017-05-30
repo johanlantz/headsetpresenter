@@ -1,0 +1,52 @@
+<GRAMMAR LANGID="409">
+    <DEFINE>  
+        <ID NAME="VID_Navigation"       VAL="254"/>
+		<ID NAME="VID_Direction"        VAL="255"/>
+		<ID NAME="VID_Forward"          VAL="301"/>
+		<ID NAME="VID_Backward"         VAL="302"/>
+		<ID NAME="VID_ToBeginning"      VAL="303"/>
+		<ID NAME="VID_ToEnd"            VAL="304"/>
+		<ID NAME="VID_Command"          VAL="401"/>
+		<ID NAME="VID_CommandParam"     VAL="402"/>
+		<ID NAME="VID_CommandBlack"     VAL="403"/>
+		<ID NAME="VID_CommandWhite"   VAL="404"/>
+		<ID NAME="VID_CommandExit"		VAL="405"/>
+    </DEFINE>
+   
+    <RULE ID="VID_Navigation" TOPLEVEL="ACTIVE">
+        <P>Presentation</P>
+        <P>
+            <L>
+                <P>Move</P>
+                <P>Goto</P>
+            </L>
+        </P>
+        <RULEREF REFID="VID_Direction" /> 
+    </RULE>
+    <RULE ID="VID_Direction" >
+        <L PROPID="VID_Direction">
+            <P VAL="VID_Forward">Forward</P>
+            <P VAL="VID_Backward">+Backward</P>
+            <P VAL="VID_ToBeginning">to first slide</P>
+            <P VAL="VID_ToEnd">to last slide</P>
+        </L>
+    </RULE>
+
+	<RULE ID="VID_Command" TOPLEVEL="ACTIVE">
+        <P>Presentation</P>
+        <P>
+            <L>
+                <P>Invoke</P>
+                <P>Command</P>
+            </L>
+        </P>
+        <RULEREF REFID="VID_CommandParam" /> 
+    </RULE>
+	<RULE ID="VID_CommandParam" >
+        <L PROPID="VID_CommandParam">
+            <P VAL="VID_CommandBlack">Black</P>
+            <P VAL="VID_CommandWhite">White</P>
+            <P VAL="VID_CommandExit">+Exit</P>
+        </L>
+    </RULE>
+</GRAMMAR>

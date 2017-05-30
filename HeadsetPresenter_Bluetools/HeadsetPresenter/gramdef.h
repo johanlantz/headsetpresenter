@@ -1,0 +1,11 @@
+#define VID_Navigation 254
+#define VID_Direction 255
+#define VID_Forward 301
+#define VID_Backward 302
+#define VID_ToBeginning 303
+#define VID_ToEnd 304
+#define VID_Command 401
+#define VID_CommandParam 402
+#define VID_CommandBlack 403
+#define VID_CommandWhite 404
+#define VID_CommandExit 405

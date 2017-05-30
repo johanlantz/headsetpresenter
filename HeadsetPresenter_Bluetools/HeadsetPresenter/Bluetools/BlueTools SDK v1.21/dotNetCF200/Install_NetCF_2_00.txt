@@ -1,0 +1,17 @@
+For more info please visit 
+http://franson.com/bluetools
+http://franson.com/forum
+
+GET STARTED
+***********
+
+Start one of the samples and add a reference to
+Franson.BlueTools.200.CF.dll	   	(Must be referenced)
+Franson.Protocols.Obex.200.CF.dll	(For OBEX support)
+Franson.Protocols.SMS.200.CF.dll	(For AT and SMS support)
+
+Additional information:
+..\dotNetCf\Install_NetCf_1_00.txt
+
+http://franson.com/bluetools
+http://franson.com/forum

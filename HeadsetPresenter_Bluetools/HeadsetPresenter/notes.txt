@@ -1,0 +1,8 @@
+Om man får riktigt skumma kraschar efter dll anrop så titta så
+AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
+är inkluderat överst i den exporterade funktionen.
+
+Do not send  by reference to DLL, causes heap crashes
+
+There are functions in SuperController that are only available there. In that case
+a supercontroller must be passed to the function. This is the case for the WizardDialog->SetController??

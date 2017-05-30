@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "FindAndConnect", "FindAndConnect.csdproj", "{19286FA9-7426-4A97-AA96-0E9CF8D907B0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Debug.ActiveCfg = Debug|Pocket PC
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Debug.Build.0 = Debug|Pocket PC
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Debug.Deploy.0 = Debug|Pocket PC
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Release.ActiveCfg = Release|Pocket PC
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Release.Build.0 = Release|Pocket PC
+		{19286FA9-7426-4A97-AA96-0E9CF8D907B0}.Release.Deploy.0 = Release|Pocket PC
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

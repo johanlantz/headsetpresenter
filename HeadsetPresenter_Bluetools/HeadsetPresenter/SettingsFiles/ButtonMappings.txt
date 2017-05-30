@@ -1,0 +1,74 @@
+-------------------------------------------
+ApplicationName : PowerPoint
+WindowMatch : StartMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : n
+VolumeDownButton : p
+ConnectButton : n
+PlayButton : b
+StopButton : {ESC}
+PauseButton : b
+FFWDButton : n
+REWButton : p
+-------------------------------------------
+ApplicationName : PowerPoint Viewer
+WindowMatch : PartialMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : n
+VolumeDownButton : p
+ConnectButton : n
+PlayButton : b
+StopButton : {ESC}
+PauseButton : b
+FFWDButton : n
+REWButton : p
+-------------------------------------------
+ApplicationName : Impress
+WindowMatch : PartialMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : n
+VolumeDownButton : p
+ConnectButton : n
+PlayButton : b
+StopButton : {ESC}
+PauseButton : b
+FFWDButton : n
+REWButton : p
+-------------------------------------------
+ApplicationName : Windows Media Player
+WindowMatch : PartialMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : ^f
+VolumeDownButton : ^b
+ConnectButton : ^p
+PlayButton : ^p
+StopButton : ^s
+PauseButton : ^p
+FFWDButton : ^f
+REWButton : ^b
+-------------------------------------------
+ApplicationName : Player Window
+WindowMatch : PartialMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : B
+VolumeDownButton : Z
+ConnectButton : X
+PlayButton : X
+StopButton : V
+PauseButton : X
+FFWDButton : B
+REWButton : Z
+-------------------------------------------
+ApplicationName : iTunes
+WindowMatch : ExactMatch
+GrammarFile : HPGrammar.xml
+VolumeUpButton : ^{RIGHT}
+VolumeDownButton : ^{LEFT}
+ConnectButton : { }
+PlayButton : { }
+StopButton : { }
+PauseButton : { }
+FFWDButton : ^{RIGHT}
+REWButton : ^{LEFT}
+
+

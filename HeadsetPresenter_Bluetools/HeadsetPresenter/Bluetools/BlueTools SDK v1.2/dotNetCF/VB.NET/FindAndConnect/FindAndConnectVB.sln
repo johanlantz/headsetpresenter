@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{CB4CE8C6-1BDB-4DC7-A4D3-65A1999772F8}") = "FindAndConnectVB", "FindAndConnectVB.vbdproj", "{52133999-995A-4936-9AFA-8E78B6C2B3E9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "BlueToolsNETCE", "..\..\..\..\Net2002\BlueToolsNET\BlueToolsNETCE.csdproj", "{310F1458-99D4-4631-9B5F-98B867A3ECB5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Debug.ActiveCfg = Debug|Pocket PC
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Debug.Build.0 = Debug|Pocket PC
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Debug.Deploy.0 = Debug|Pocket PC
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Release.ActiveCfg = Release|Pocket PC
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Release.Build.0 = Release|Pocket PC
+		{52133999-995A-4936-9AFA-8E78B6C2B3E9}.Release.Deploy.0 = Release|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Debug.ActiveCfg = Debug|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Debug.Build.0 = Debug|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Debug.Deploy.0 = Debug|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Release.ActiveCfg = Release|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Release.Build.0 = Release|Pocket PC
+		{310F1458-99D4-4631-9B5F-98B867A3ECB5}.Release.Deploy.0 = Release|Pocket PC
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

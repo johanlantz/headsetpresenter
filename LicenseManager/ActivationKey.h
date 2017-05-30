@@ -1,0 +1,1 @@
+#define ACTIVATION_KEY 150

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObexFTPClientSampleXP", "ObexFTPClientSampleXP.csproj", "{9F532723-32E5-46A8-9F67-A2BFC9769EC0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9F532723-32E5-46A8-9F67-A2BFC9769EC0}.Debug.ActiveCfg = Debug|.NET
+		{9F532723-32E5-46A8-9F67-A2BFC9769EC0}.Debug.Build.0 = Debug|.NET
+		{9F532723-32E5-46A8-9F67-A2BFC9769EC0}.Release.ActiveCfg = Release|.NET
+		{9F532723-32E5-46A8-9F67-A2BFC9769EC0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

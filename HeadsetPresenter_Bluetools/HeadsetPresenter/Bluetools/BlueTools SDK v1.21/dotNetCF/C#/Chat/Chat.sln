@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "Chat", "Chat.csdproj", "{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Debug.ActiveCfg = Debug|Pocket PC
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Debug.Build.0 = Debug|Pocket PC
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Debug.Deploy.0 = Debug|Pocket PC
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Release.ActiveCfg = Release|Pocket PC
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Release.Build.0 = Release|Pocket PC
+		{FF28169A-6D02-405C-95BF-25C0BD1E9D8C}.Release.Deploy.0 = Release|Pocket PC
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

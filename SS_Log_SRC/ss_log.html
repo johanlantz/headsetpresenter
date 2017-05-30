@@ -1,0 +1,645 @@
+<!--------------------------------------------------------------------------->
+<!--                           INTRODUCTION
+
+ The Code Project article submission template (HTML version)
+
+Using this template will help us post your article sooner. To use, just
+follow the 3 easy steps below:
+
+     1. Fill in the article description details
+     2. Add links to your images and downloads
+     3. Include the main article text
+
+That's all there is to it! All formatting will be done by our submission
+scripts and style sheets.
+
+-->
+<!--------------------------------------------------------------------------->
+<!--                        IGNORE THIS SECTION                            -->
+<html>
+<head>
+<title>The Code Project</title>
+<Style>
+BODY, P, TD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt }
+H2,H3,H4,H5 { color: #ff9900; font-weight: bold; }
+H2 { font-size: 13pt; }
+H3 { font-size: 12pt; }
+H4 { font-size: 10pt; color: black; }
+PRE { BACKGROUND-COLOR: #FBEDBB; FONT-FAMILY: "Courier New", Courier, mono; WHITE-SPACE: pre; }
+CODE { COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono; }
+</style>
+<link rel="stylesheet" type=text/css href="http://www.codeproject.com/styles/global.css">
+</head>
+<body bgcolor="#FFFFFF" color=#000000>
+<!--------------------------------------------------------------------------->
+
+
+<!-------------------------------     STEP 1      --------------------------->
+<!--  Fill in the details (CodeProject will reformat this section for you) -->
+
+<pre>
+Title:       <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>, FAST Program logging and tracing class.
+Author:      Steve Schaneville
+Email:       appdev@hotmail.com
+Environment: VC++ 6.0, NT 4.0, Win2000, WinXP
+Keywords:    log, logging, trace, tracing, program flow
+Level:       Intermediate&quot;
+Description: Easily trace and log program flow.  Allows multiple filters, multiple destinations (file, nt event log, etc), and it's VERY FAST!
+Section      Free Tools
+SubSection   General
+</pre>
+
+<!-------------------------------     STEP 2      --------------------------->
+<!--  Include download and sample image information.                       -->
+
+<ul class=download>
+<li><a href="ss_log_demo.zip">Download demo project - 257 Kb</a></li>
+<li><a href="ss_log_src.zip">Download source - 282 Kb</a></li>
+</ul>
+
+<p><img src="ss_log.gif" alt="Partial screenshot of the SS_Log viewer"></p>
+
+
+<!-------------------------------     STEP 3      --------------------------->
+<!--  Add the article text. Please use simple formatting (<h2>, <p> etc)   -->
+
+<h2>Contents</h2>
+<ol>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Background">Background</a></li>
+  <li><a href="#Integration">Integration Into Your Project</a></li>
+  <li><a href="#UsingSS_Log">Using the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> Class</a></li>
+  <ul>
+    <li><a href="#GlobalLog">The Global Log</a></li>
+    <li><a href="#Server">The Server</a></li>
+    <li><a href="#Flags">Flags</a></li>
+    <li><a href="#RegistryFilters">Registry Filters</a></li>
+    <li><a href="#DestinationName">Destinations and Destination Name</a></li>
+    <li><a href="#ErrorHandling">Error Handling</a></li>
+    <li><a href="#OtherCommands">Other Commands</a></li>
+    <li><a href="#DisableLogging">Disabling All Logging</a></li>
+  </ul>
+  <li><a href="#MultipleLogs">Creating Multiple Local Logs</a></li>
+  <li><a href="#UsingViewer">Using the Viewer</a> (SS_Log_Server.exe)</li>
+  <ul>
+    <li><a href="#IncomingMessageFilters">The Incoming Message Filters</a></li>
+    <li><a href="#ListviewFilters">The Listview Filters</a></li>
+    <li><a href="#JumpToCode">Jump To Code in Visual Studio</a></li>
+  </ul>
+  <li><a href="#CreateFilters">Creating Your Own Filters</a></li>
+  <li><a href="#CreateDestinations">Create Your Own Destinations</a></li>
+</ol>
+<p>The Complete class documentation can be found at
+  <a href="http://sslog.webhop.net/class_s_s___log.html">http://sslog.webhop.net</a>.</p>
+<h2>Introduction<a name="Introduction"></a></h2>
+
+<p>Often times we want to create a log of what steps a program takes during run-time.
+  Maybe our program works fine on all of our computers in house, but it is crashing
+  at a customer's site. Or maybe we are developing on WinNT, but are testing on
+  Win98 without a development environment on the Win98 machine. Since we can't
+  debug in these cases, it would be nice to have a log of all the steps a program
+  took before it crashed.
+<p>This set of projects perform program logging and offer numerous features:
+<ul>
+  <li>Easy integration into any project (MFC, Windows non-MFC, console). Just
+    include &quot;SS_Log.h&quot;.</li>
+  <li>Log messages with sprintf-style functionality in a single line of code.</li>
+  <li>Automatically include date/time, filename and line number info in every
+    message.</li>
+  <li>Log to multiple destinations, including to a file, to the NT Event Log, and/or
+    to a dynamic viewer that launches on demand. Implement your own destination
+    by deriving from a provided base class.</li>
+  <li>Assign flags to messages, and filter out the undesired flags on the fly.
+    Easily define your own message types and automatically have full viewer and filter
+    functionality for your new types.</li>
+  <li>Dynamically filter based on message flags, message text, message ID, etc.
+    after program has completed.</li>
+  <li><strong>Double-click on messages in the provided viewer and Visual Studio
+    will jump to the corresponding file and line number</strong> (currently supported
+    in VC++ 6.0 only. VS.NET to come...).</li>
+  <li>Log &quot;Entering MyFunction&quot; and &quot;Exiting MyFunction&quot; messages
+    automatically with only 1 line of code (per function).</li>
+  <li>Have multiple simultaneous logs, each with their own parameters and destinations.</li>
+  <li>Entirely thread safe.</li>
+  <li>Set a maximum file size that your log file should not exceed. The system
+    will throw away the oldest messages and continue logging.</li>
+  <li><strong>VERY FAST!</strong> During testing on an AMD 1700+, I logged over
+    100,000 messages in under 10 seconds! While many logging systems will slow
+    the performance of your app, this one shouldn't noticeably impact you.</li>
+</ul>
+<h2>Background<a name="Background"></a></h2>
+
+<p>This is version 3 of the code. Version 3 has undergone a major re-write, and
+  many of the functions that once were part of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class have now been
+  deprecated. All deprecated functions are still supported, so your older code
+  should still work with this version, but for those who've use this code in the
+  past, please make yourself familiar with the new calls.
+<p>In the first version of this code, if writing to a file, we would write and
+  flush each message immediately when the message was logged. This caused a good
+  bit of slowdown. The reason for the immediate flush was, if your program crashed,
+  you'd be guaranteed to have all messages that were logged before the crash.
+<p>The new design still guarantees that all messages will be logged, but we won't
+  force the overhead of flushing to file every time. Instead, all messages get
+  sent to a server in a separate process that is launched and terminated on the
+  fly, and the server will flush the contents out when it gets the chance.
+<p>I want to thank Graven for this suggestion. That and the &quot;dynamically filter after
+  the fact&quot; suggestions are the basis of the new design, and they were his
+  ideas. Several other people made suggestions too, and I appreciate all of them.
+  I implemented many of them, and those that I did not, I will definitely keep
+  on the list for the future.
+<h2>Integration into your project<a name="Integration"></a></h2>
+
+<p>Integration into your project is easy. The following steps are necessary:</p>
+<ol>
+  <li>#include &quot;SS_Log.h&quot; in any file that you want to log from.</li>
+  <li>For debug builds, link against SS_LogD.lib, and for release builds, SS_Log.lib.
+    If you would prefer to compile the cpp files instead of linking to the libraries,
+    compile SS_Log.cpp and SS_Log_Defines.cpp.</li>
+  <li>#declare &quot;_SS_LOG_ACTIVE&quot; in your project. <b>DO NOT FORGET THIS STEP!</b></li>
+  <li>Copy the SS_Log_Server.exe and SS_Log_AddIn.dll files into your %SYSTEMROOT%
+    folder (ex. c:\winnt or c:\windows.).</li>
+</ol>
+<p>That should about do it. The
+  <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> code will handle the rest. If you downloaded
+  the sources rather than the binaries, compile the projects in the following order:</p>
+<ol>
+  <li><b>Utils</b> -- just a set of helper classes (string, registry, and list).  Feel
+    free to use these classes in your projects... they are fairly robust ;-)</li>
+  <li><b>SS_Log</b> -- the main
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> logging class. The files in this project
+    are the ones that you will include in your application to do your logging.</li>
+  <li><b>SS_Log_Server</b> -- the server and viewer project. This project will
+    generate the SS_Log_Server.exe that must be copied into the %SYSTEMROOT%
+    directory, and will receive all messages as they are generated by the
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>
+    class.</li>
+  <li><b>SS_Log_AddIn</b> -- the Visual Studio addin.  This project generates the
+    SS_Log_AddIn.dll file that must be copied into the %SYSTEMROOT% directory.  It
+    Allows the user to double-click in the viewer and have Visual Studio jump
+    to the corresponding file and line number.</li>
+  <li><b>SS_Log_Test</b> -- this is just an example of how to use the
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class.
+    There is extensive commenting in this project to give you an idea of much
+    of the functionality of
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>.</li>
+</ol>
+</p>To see how quick and easy it is to start logging, I give you the following code:</p>
+<pre>#include "SS_Log.h"
+
+main()
+{
+    Log("Hello World!");
+}</pre>
+<p>... and as long as you've not forgotten to #define _SS_LOG_ACTIVE in your precompiler,
+  this code will produce a log with the filename, line number, date/time, default filter,
+  message ID, and your message text.</p>
+<h2>Using the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> Class<a name="UsingSS_Log"></a></h2>
+<p>Before reading this whole article (as it is quite long), you might want to just
+  look in the sample program (SS_Log_Test.cpp) that is included in the sources.
+  There are extensive comments, and it might take less time to pick up the jist
+  of things there.  That project will not show everything available to you, but should
+  get you started.  As some point you should read the article if you want to learn the
+  full functionality from <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>.</p>
+<h4>The Global Log<a name="GlobalLog"></h4>
+<p>The <strong>global log</strong> is a single instance of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class that
+  is available to all files that include SS_Log.h. You can begin using the global
+  log immediately just by including that file, using the following macros:</p>
+<pre> 1.  INT Log(TCHAR* pMsg, ...);
+ 2.  INT Log(DWORD dwFilter, TCHAR* pMsg, ...);
+ 3.  INT LogID(UINT nResourceID, ...);
+ 4.  INT LogID(DWORD dwFilter, UINT nResourceID, ...);</pre>
+<p>The simplest form (the first macro above) takes an sprintf-style format string
+  and a variable number of parameters that will be formatted into the final message.&nbsp;</p>
+  The second macro allows you to include message flags that override the default
+  flags (more on flags later). The third and fourth macros are duplicated of the
+  first two, except that they take a resource ID as the format string.</p>
+<p>You can access configuration options for the global log with the following
+  macros (we will discuss each in turn):</p>
+<pre> 5.  DWORD LogSetFlags(DWORD dwFlags);
+ 6.  DWORD LogGetFlags();
+ 7.  DWORD LogRemoveFlags(DWORD dwFlags);
+ 8.  DWORD LogAddFlags(DWORD dwFlags);
+ 9.  INT LogSetDestinationName(LPCTSTR szName);
+10.  INT LogEraseLog();
+11.  INT LogLimitOutputSize(DWORD dwSizeLimit);
+12.  INT LogGetLastError();
+13.  INT LogSetRegistryKey(LPCTSTR szRegKey);
+14.  VOID LogUseServer(BOOL bUseServer);
+15.  BOOL LogSucceeded();
+16.  VOID LogInstanceHandle(HANDLE hInstance);
+17.  VOID LogEnterFunction(LPCTSTR szFunctionName);
+18.  DWORD LogGetRegistryFilters();
+19.  BOOL LogSetRegistryFilters(DWORD dwRegFilters);</pre>
+<h4>The Server<a name="Server"></h4>
+<p>The first configuration function we need to talk about is the <code>LogUseServer()</code>
+  function. By default, the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class will launch a separate process, the SS_Log_Server
+  application (which must be in the %SYSTEMROOT% directory), to capture all messages.
+  There is one main reason for using a separate process: Speed. If we logged everything
+  straight to a file (as the first version of <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> did), we would need to flush
+  each and every message to disk immediately after it was logged to ensure that,
+  in the event of a program crash, we didn't drop any messages. Flushing every
+  message is VERY inefficient though, and can easily cause performance problems.
+</p>
+<p>The SS_Log_Server class will be launched on demand and will prepare a named
+  pipe to receive all messages. Then it will flush these messages out when it
+  gets a chance, never hindering your application, which has long since moved
+  on to other things. During testing, I logged over 100,000 messages in under
+  10 seconds (AMD 1700+) using the server, and only 1,000 in more than 10 seconds without
+  the server. The server will even terminate itself when the instance of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>
+  class that started it is destructed.</p>
+<p>If for some reason you still don't want to use the server, the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class
+  still supports flushing every message straight out to a file. Call the <code>LogUseServer(FALSE)</code>
+  to use this behavior.</p>
+<h4>Flags<a name="Flags"></h4>
+<p>Macros 5-8 above allow the user to specify the default flags that will be sent with
+  every message (unless overridden in the message). All flags are grouped into
+  3 categories:</p>
+
+<ul>
+  <li><strong>Level and User Flags</strong></li>
+  <ul>
+    <li><code>LOGTYPE_CRITICAL</code></li>
+    <li><code>LOGTYPE_WARNING</code></li>
+    <li><code>LOGTYPE_NORMAL</code></li>
+    <li><code>LOGTYPE_TRACE</code> (default)</li>
+    <li><code>LOGTYPE_TRACE_FAIL</code></li>
+    <li><code>LOGTYPE_INOUT</code></li>
+    <li><em>and any user defined types</em></li>
+  </ul>
+  <li><strong>Build Type Flags</strong></li>
+  <ul>
+    <li><code>LOGTYPE_DEBUG</code> (default in debug builds)</li>
+    <li><code>LOGTYPE_RELEASE</code> (default in release builds)</li>
+  </ul>
+  <li><strong>Destination Flags</strong></li>
+  <ul>
+    <li><code>LOGTYPE_LOGTOWINDOW</code> (default)</li>
+    <li><code>LOGTYPE_LOGTOFILE</code> (default)</li>
+    <li><code>LOGTYPE_LOGTOEVENTLOG</code></li>
+    <li><em>and any user defined destinations</em></li>
+  </ul>
+</ul>
+<p>Call the <code>LogAddFlags(...)</code> and <code>LogRemoveFlags(...)</code>
+  functions to add or remove any combination of flags using the bitwise OR operator
+  (&quot;|&quot;). These two functions work just as expected in that the flags
+  you pass in will be added or removed from the default list.</p>
+<p>Use the <code>LogSetFlags(...)</code> to overwrite flags in
+  the same group as those flags that you are passing in. This functionality may
+  be a little different than expected.  For example, if you were
+  to call <code>LogSetFlags(LOGTYPE_CRITICAL | LOGTYPE_LOGTOEVENTLOG)</code>,
+  any currently set flags in the Level/User group will be overwritten by the <code>LOGTYPE_CRITICAL</code>
+  flag, and any current ones in the destinations groups will be replaced with
+  the <code>LOGTYPE_LOGTOEVENTLOG</code>. You can also ask for which flags are
+  currently set as the defaults by calling <code>LogGetFlags(...)</code>.</p>
+<p>There are no restrictions on the combination of flags that can be set. Any number
+  of flags from any group can be set at any time (ex. while it might not make
+  much sense to set critical and warning flags, both can be set at the same time.  On
+  the other hand, it may well make sense to set multiple destinations, such as to file
+  and to window).</p>
+<p>All messages will be sent with the flags that are currently set, but you can
+  override the current flags on a per-message-basis with macros #2 and #4 described
+  above. When overriding the current flags, only those in the group passed in
+  will be overridden (just as when calling the <code>LogSetFlags(...)</code> function).</p>
+<h4>Registry Filters<a name="RegistryFilters"></h4>
+<p>For each flag mentioned above, there is an equivilent "filter" that is placed into
+  the registry (placed at the location specified by the
+  <code><a href="#SetRegistryKey">LogSetRegistryKey()</a></code> function). These
+  filters are turned on (0) or off (1) and are read in by the <a href="#Server">server</a>
+  application. As messages are received by the server, it throws away messages based
+  on these filters (it is also possible to save all messages and then dynamically filter
+  them after the run is complete... see <a reg="#UsingViewer">Using the Viewer</a>).</p>
+<p>The <code>LogGetRegistryFilters</code> and <code>LogSetRegistryFilters</code> macros
+  are included so that your application can provide your users with a UI that will
+  turn on and off these filters.  The Get version will read the registry and return
+  all filter flags that are currently "on" in a DWORD.  The Set version will
+  take a DWORD and write those flags to the registry.  Be careful with the Set function,
+  as it will overwrite every filter currently stored in the registry.  So, for example,
+  if you pass in only the <code>LOGTYPE_LOGTOWINDOW</code> flag, that filter will be turned
+  on and ALL other flags will be turned off.  This will probably cause all messages
+  to be filtered out of the server, creating an empty log.</p>
+<p>Both of these functions notify the server that the registry has been updated and
+  it should re-read those filters into memory.</p>
+<h4>Destinations and Destination Name<a name="DestinationName"></h4>
+<p>Currently there are three destinations available, though you can make your
+  own (derive a class from the <code>SSLogDestination</code> class). Messages are
+  "dispatched" to each destination for which one of the destination flags is set
+  (see the <a href="#Flags">destination flags</a> listed above).</p>
+<p>The With the <code>LOGTYPE_LOGTOFILE</code> flag set, all messages will be sent to
+  the filename specified in the <code>LogSetDestinationName(...)</code> function. The file
+  will be placed in the local directory of the calling application unless you
+  specify otherwise in the destination name. </p>
+<p>The <code>LOGTYPE_LOGTOEVENTLOG</code> flag will send all messages to the NT
+  event log. Note that Win9x can be configured to send these messages to a file
+  (see the MSDN ReportEvent() and RegisterEventSource() functions for details).</p>
+<p>The <code>LOGTYPE_LOGTOWINDOW</code> flag is more unique. The &quot;window&quot;
+  (which we will call the "viewer") is actually an MFC single document application
+  that is part of the SS_Log_Server.exe. All messages will be sent to the server,
+  and the server will display this single document window, placing the messages
+  in a list view. More details on the <a href="#UsingViewer">viewer</a> below.</p>
+<h4>Error Handling<a name="ErrorHandling"></h4>
+<p>Call <code>LogGetLastError()</code> to get one of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> defined errors, found
+  <a href="http://sslog.webhop.net/_s_s___log___defines_8h.html#a57">here</a>.
+  Use <code>LogSucceeded()</code> to get a BOOL value stating whether or not the
+  last call was a success.</p>
+<h4>Other Commands<a name="OtherCommands"></h4>
+<p>The <code>LogEraseLog()</code> macro will cause the viewer and file destinations
+  to erase their logs. The NT event log is unaffected by this call.</p>
+<p>The <code>LogLimitOutputSize()</code> macro currently only affects the file
+  destination. Pass in the number of kilobytes that you do not want your log file
+  to exceed. The file destination will monitor the file size, and when a message
+  will cause it to exceed this size, the file will be trimmed in half, throwing
+  away the oldest 50% of the messages and making room for new ones.</p>
+<p>The <code>LogSetRegistryKey()</code><a name="SetRegistryKey"></a> macro controls
+  where in the registry <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> will keep its settings. This allows you to use the
+  <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> in multiple projects and not have them bump heads. Note that currently you
+  only get to specify a portion of the key. If you pass in &quot;MyCompany\MyApp&quot; as
+  your registry key, the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> will store its settings in
+  HKEY_LOCAL_MACHINE\Software\MyCompany\MyApp\SS_Log.</p>
+<p>The <code>LogInstanceHandle()</code> macro will give the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class your
+  application's instance handle, which is necessary when using the <code>LogID(...)</code>
+  macros. If you don't set the instance handle first, calls to <code>LogID(...)</code>
+  will fail.</p>
+<p>The <code>LogEnterFunction()</code> macro actually logs <i>two</i> messages. Call this
+  function when entering a function and pass in the function's name.  An "Entering MyFunction" message will
+  be created when this line of code is run <i>AND</i> an "Exiting MyFunction" message will be
+  sent when the function exits.</p>
+<h4>Disabling Logging<a name="DisableLogging"></h4>
+<p>You can compile out all logging to the <i>global log</i> by simply not #defining _SS_LOG_ACTIVE.
+  This will also compile out all logging for <i>local logs</i> <b>ONLY IF</b> you
+  compile the SS_Log.cpp and SS_Log_Defines.cpp files with your project rather
+  than linking to the SS_Log.lib and SS_LogD.lib files.</p>
+<p>Regardless of whether or not you #define _SS_LOG_ACTIVE, you can still
+  eliminate ALL logging by setting the "LoggingDisabled" value in the
+  registry to 1 (or anything other than 0). Each instance of the SS_Log will
+  read this value in during construction and obey it's value.  The registry
+  will be re-read when the user specify's a different registry key in a
+  call to the SetRegistryKey function described above. Currently I have not
+  provided a way to programmatically set this value.  You must set this value
+  in the registry manually (i.e. open regedit).</p>
+<p>The Complete class documentation can be found at
+  <a href="http://sslog.webhop.net/class_s_s___log.html">http://sslog.webhop.net</a>.</p>
+<h2>Creating Multiple Local Logs<a name="MultipleLogs"></a></h2>
+<p>Up to now, everything you've learned has been centered around the Global Log.
+  This log is simple a globally available instance of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class that was
+  created for you when your application fired up. You are not limited to using
+  this log, however. You can create as many &quot;local logs&quot; as you need.
+  This will help you to keep different information separate (such as logging to
+  separate logs per thread, per module, or however you'd like to organize it).</p>
+<p>To create your own instance of the
+  <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class and log
+  two messages to it, use the following code:</p>
+<p>
+  <pre>SS_Log myLog(&quot;MyServerName&quot;);
+Log(&amp;myLog, &quot;This is my value: %d.&quot;, nMyValue);
+LogID(&amp;myLog, nResourceID);</pre>
+</p>
+<p>The first time you log a message, your instance will launch a new server (even
+  if one has already been launched from the global log). All messages from this
+  instance will be sent to that server. The server will close itself once this
+  instance of the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> is destructed.</p>
+<p>You can access all the configuration functions just like in the global log,
+  except that you don't use the macros:</p>
+<pre>20. DWORD myLog.SetFlags(DWORD dwFlags);
+21. DWORD myLog.GetFlags();
+22. DWORD myLog.RemoveFlags(DWORD dwFlags);
+23. DWORD myLog.AddFlags(DWORD dwFlags);
+24. INT myLog.SetDestinationName(LPCTSTR szName);
+25. INT myLog.ErasemyLog.();
+26. INT myLog.LimitOutputSize(DWORD dwSizeLimit);
+27. INT myLog.GetLastError();
+28. INT myLog.SetRegistryKey(LPCTSTR szRegKey);
+29. VOID myLog.UseServer(BOOL bUseServer);
+30. BOOL myLog.Succeeded();
+31. VOID myLog.InstanceHandle(HANDLE hInstance);
+32. DWORD myLog.GetRegistryFilters();
+33. BOOL myLog.SetRegistryFilters(DWORD dwRegFilters);
+34. VOID LocalLogEnterFunction(SS_Log* pLog, LPCTSTR szFunctionName);</pre>
+<p>A couple things to note: </p>
+<ol>
+  <li>You can pass <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a>
+    pointers between threads and log from them simultaneously.
+    The <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class
+    is thread safe on a per instance basis (but not across instances, see note #2).</li>
+  <li>You CAN bind two (or more)
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> instances to
+    the same server by passing
+    in the same name in the constructor. The first instance that logs a message
+    will spawn the server, and all instances after that will bind to that same
+    server rather than spawning a new one of their own. BUT THIS IS NOT RECOMMENDED
+    in multi-threaded apps, because if two separate instances of the
+    <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class
+    both try to write to the server at the same time (from separate threads),
+    one of the two messages will get dropped.</li>
+  <li>You can even bind SS_Log's in different processes to the same server, but
+    the same problem mentioned in note #2 applies.</li>
+</ol>
+<h2>Using the Viewer<a name="UsingViewer"></a></h2>
+<p>The viewer (or &quot;window&quot;) and the server are both one app (SS_Log_Server.exe).
+  As described earlier, the
+  <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class will
+  start an instance of the server when needed, and terminate that server when it
+  is done. What wasn't mentioned is that if you had the <code>LOGTYPE_LOGTOWINDOW</code>
+  flag set on any of the messages that were sent to the server and if the
+  filter in the registry is allowing <code>LOGTYPE_LOGTOWINDOW</code> messages to be processed,
+  that instance of the SS_Log_Server will remain open and display its window even after the
+  <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> that started it
+  is destructed. This is so you can view the messages that were logged to the
+  window.</p>
+<p>You can also start the SS_Log_Server.exe yourself and open logs saved for
+  sorting/filtering/printing/jumping to code (the print output
+  is weak at best... if anyone wants to have a go at improving it, I'll integrate
+  your code ;-). Files that have been written out with the file destination (the
+  <code>LOGTYPE_LOGTOFILE</code> flag) and files that were saved by the viewer
+  itself can both be opened.</p>
+<h4>Filter Incoming Server Messages (destructive)<a name="IncomingMessageFilters"></h4>
+<p>You can filter messages in two ways. The first is by filtering out messages
+  as they come into the server. When using this method of filtering, the messages
+  are simply thrown away, leave no way to retrieve them in the future (hence the
+  "destructive" term).</p>
+<p>You can turn these filters on and off by clicking on "Edit->Filter Incoming Server
+  Messages (destructive)" in the server window (options that are grayed out are not
+  supported in this filter mode). A dialog will pop up will checkboxes
+  for each flag type (including user defined flag types, discussed in the
+  <a href="#CreateFilters">Create You Own Filters</a> section). For a message to
+  arrive at its destination(s), at least 1 flag IN EACH GROUP must be set and
+  the corresponding filter must be turned on.</p>
+<p>You can also turn the filters on and off directly in the registry. They will
+  be located where you specified with a call to the <code>SetRegistryKey(...)</code>
+  function. If you never call that function, the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class defaults to
+  behaving as if you had called it and passed in "SS_Log" (see
+  <code><a href="#SetRegistryKey">SetRegistryKey(...)</a></code>).</p>
+<p>Note that because these filters are maintained in the registry, they will
+  remain active across separate "runs" of your program.</p>
+<h4>Filter Listview (non-destructive)<a name="ListviewFilters"></h4>
+<p>Rather than doing destructive filtering, you can leave all the Incoming Server Messages
+  filters on and then do dynamic filtering in the viewer after your app has terminated.
+  Click on "Edit->Filter Listview (non-destructive)" to see your options. In addition
+  to turning on and off the flag type filters, you can filter by message text,
+  filename, and message ID.  You can also specify if all flags or only 1 flag must be set
+  for the message to appear in the view.</p>
+<p>Note that because these filters are maintained in the registry, they will
+  remain active across separate "runs" of your program.  This can be confusing if, for example,
+  you forget that you left a message text filter on and none of your new messages
+  seem to be showing up.  Just turn off the filter and they will re-appear. Also note
+  that when saving, ALL messages in the server will be saved to file, even if they are
+  filtered out of the view by the view filters.  Printing, however, prints only what
+  is currently in the view, properly obeying the view filters.</p>
+<h4>Jump To Code in Visual Studio<a name="JumpToCode"></h4>
+<p>Probably the neatest feature about the viewer is it's ability make Visual Studio
+  jump to a file and line number. Just double-click on a logged message and Visual
+  Studio will open that file and move to the line that produced the log (if there is
+  not an instance of Visual Studio running, one will be launched). Note
+  that the first time you do that, the viewer will need to install the SS_Log_AddIn.dll
+  as a plug-in to VC++. Make sure you have that file in your %SYSTEMROOT% folder,
+  and that there are no instances of VC++ running during the install.</p>
+<h2>Creating Your Own Filters<a name="CreateFilters"></a></h2>
+<p>It is very easy to expand the flags with the <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> class. The steps to do so are as
+  follows:</p>
+<ol>
+  <li>Look in the SS_Log_Defines.h file for the definition of <code>SS_LogFilterType</code>,
+    defined as <code>typedef enum SS_LogFilterType{...}</code>.  Add a LOGTYPE_* entry to that
+    enum list (i.e. <code>LOGTYPE_XYZ</code>) and just assign it the next bit available in line
+    (ex. <code>LOGTYPE_XYZ = (1<<9)</code>).</li>
+  <li>Add your new filter type to the <code>LOGTYPE_USERS</code> #define just below the
+    <code>SS_LogFilterType</code> enum. Use the bitwise OR ("|") operator (ex.
+    <code>#define LOGTYPEGROUP_USERS ( LOGTYPE_ADD_YOUR_TYPE_HERE | LOGTYPE_XYZ )</code>).</li>
+  <li>In the SS_Log_Defines.cpp file, find the <code>SSLogFilter g_Filters[]</code> object and add
+    an entry to that array.  The entry should include 3 items:</li>
+    <ul>
+      <li>the <code>LOGTYPE_XYZ</code> enum value you just added to the
+        <code>SS_LogFilterType</code> enum.</li>
+      <li>a string that will be shown in the Filter column of the log window.</li>
+      <li>a string that will be written into the registry... the registry entry can be used
+        to turn that filter on and off (with a 1 or 0 value). </li>
+    </ul>
+</ol>
+<p>That's all! One you run your app for the first time (so the new registry entry can be
+  written to the registry), the new filter will appear in the viewer's filter menus, and
+  everything should work as expected. Note that all user flags are part of the levels/user
+  group of flags (creating a destination flag is an exception, but requires much more effort).</p>
+<h2>Creating Your Own Destinations<a name="CreateDestinations"></a></h2>
+<p>You can create your own log destination by deriving a class from the
+  <code>SSLogDestination</code> class. There are several overrides that you can implement
+  to receive notification of messages and configuration options sent from an <a href="http://sslog.webhop.net/class_s_s___log.html">SS_Log</a> instance.
+  These overrides include:</p>
+<pre>
+// required overrides
+virtual BOOL    OnWriteMessage        	(LOGMESSAGE* pMsg) = 0;
+
+// optional overrides
+virtual BOOL    OnSetDestinationName  	(LOGMESSAGE* pMsg);
+virtual BOOL    OnEraseLog            	(LOGMESSAGE* pMsg);
+virtual BOOL    OnLimitOutputSize     	(LOGMESSAGE* pMsg);
+virtual BOOL    OnSetRegistryKey      	(LOGMESSAGE* pMsg);
+virtual BOOL    OnRegistryFiltersChanged	(LOGMESSAGE* pMsg);
+virtual BOOL    WillProcessMessage    	(LOGMESSAGE* pMsg);
+virtual BOOL    OnShutDownServer      	();
+virtual BOOL    OnBeginUpdate         	();
+virtual BOOL    OnFinishUpdate        	();
+</pre>
+<p>The <code>LOGMESSAGE</code> class contains all the information sent with the message from
+  the SS_Log class. It can be found in the stdafx.h file in the SS_Log_Server project, and
+  has the following accessor methods:</p>
+<pre>
+// Get
+INT     MessageID     ();
+INT     ProcessingID  ();
+DWORD   Flags         ();
+LPSTR   Message       ();
+LPSTR   DateTime      ();
+LPSTR   Filename      ();
+INT     LineNumber    ();
+MSGTYPE MessageType   ();
+
+// Set
+VOID    MessageID     (INT nID);
+VOID    ProcessingID  (INT nID);
+VOID    Flags         (DWORD nFlags);
+VOID    Message       (LPSTR szMsg);
+VOID    DateTime      (LPSTR szDT);
+VOID    Filename      (LPSTR szFile);
+VOID    LineNumber    (INT nLine);
+VOID    MessageType   (MSGTYPE nType);
+</pre>
+<p>The message dispatching routine in the server (see the SSLogOutput.cpp file) will check
+  every 5 seconds to see whether or not the server has received new messages for dispatch.  If there
+  are new messages, each destination will get an <code>OnBeginUpdate</code> notification. Then, for
+  each new message, the server will call each destination's <code>WillProcessMessage</code> function
+  to determine whether or not we will be logging the message.  This function should return TRUE or FALSE
+  after checking the flags for the message passed in and comparing them against the currently
+  set filters.  Note that the default implementation of <code>WillProcessMessage</code> will handle most
+  destinations' needs.</p>
+<p>If the <code>WillProcessMessage</code> returns TRUE, the <code>OnWriteMessage</code>
+  function will be called for that message. Your class MUST override this function
+  and do with the message as you will at that point.</p>
+<p>Once all new messages have been dispatched, the <code>OnFinishUpdate</code> function
+  will be called as a notification that all messages are processed.  If the server has
+  received a shutdown request from the SS_Log class, and if no other instances of the
+  SS_Log class are still bound to the server, then your derived class will then receive
+  the <code>OnShutDownServer</code> message in case you need to do some cleanup.</p>
+<p>All other override functions contain configuration data.  You can retrieve the configuration
+  data from the <code>LOGMESSAGE</code>'s <code>Message()</code> function (passed into the function
+  as the only parameter).  The info will be returned in ANSI text format. Note that even though
+  the <code>OnEraseLog</code> function has a <code>LOGMESSAGE</code> parameter, no information
+  is currently stored in it.</p>
+<p>Of course, you will need to add a flag to the SS_Log_Defines.h file as described in the
+  <a href="#CreateFilters">Creating Your Own Filters</a> section.  Note however, that you
+  should associate the flag with the Destinations group rather than with the Users group. You
+  will also need to create a new instance of your destination type during start up of the
+  server.  This can be done in the <code>SSLogOutput::CreateDestination</code> function
+  in the SSLogOutput.cpp file.
+<h2>History</h2>
+<p><h4>Version 3.02</h4></p>
+<ul><i>Fixed:</i>
+  <li>Fixed numerous memory leaks.  I think I got the lot.</li>
+  <li>Added the SetRegistryFilters and GetRegistryFilters functions to offer the
+    programmer a way to provide users a filter UI in the SS_Log integrated app.</li>
+  <li>Fixed a rare crash related to threading issues in the SS_Log_Server.exe</li>
+  <li>Added an additional constructor to the SS_Log class that take more parameters
+    so that individual functions needed not be called after construction.</li>
+  <li>The SS_Log class now stores several parameters in the registry so that, if
+    the parameters are not specified in code (overwriting the registry), they can
+    be changed in the registry by hand, which avoids a recompile for changed
+    parameters.</li>
+  <li>The "last registry key used" (the key passed into the <code>SetRegistryKey</code>
+    function) is now stored in the registry at HKCU\Software\SS_Log\SS_Log.  This
+    key is read in by the SS_Log_Server during startup, allowing it to access the
+    proper registry location (i.e. it's filters) even when the user launches the
+    app manually.</li>
+  <li>Some registry entries were not always properly initialized on first run. Fixed.</li>
+  <li>When the "Log to Window (W)" filter was turned off in the registry, the server would
+    not close properly. Fixed.</li>
+</ul>
+<ul><i>To Do:</i>
+  <li>Make the launching of SS_Log_Server.exe smarter, so that the file does not
+    need to be copied into the %SYSTEMROOT% folder.</li>
+  <li>Create a new destination that can send the logged messages across a network
+    to another "monitoring" machine.</li>
+</ul>
+<p><h4>Version 3.01</h4></p>
+<ul>
+  <li>Fixed the "flash" made by the server's window during startup.  We no longer see this
+    window for a split second during startup.</li>
+  <li>Fixed a potential (though unlikely) crash in the server's message dispatch thread
+    where outputting messages while simultaneously receiving new messages (the dirty flag).</li>
+  <li>Added the ability to jump to code for "exiting function" messages.  Also added
+    an "ID" to these messages, which will be used to match multiple entering and
+    exiting calls of the same function.</li>
+  <li>Added the "+++++" and "-----" to the exiting and entering function messages for
+    easier viewing. (suggestion by Forogar)</li>
+  <li>Added viewer feature that, when the user selects an exiting or entering function
+    message, the viewer also selects the corresponding message. (request by Forogar)</li>
+  <li>Added "DisableLogging" registy entry, so that now the user can disable the
+    logging altogether by setting this registy entry to false (0).</li>
+</ul>
+<p><h4>Version 3</h4><br>
+  This is the first version to use the SS_Log_Server and the new architecture. Previous
+  versions were not documented.</p>
+<h2>Comments</h2>
+<p>Please feel free to ask questions, offer comments/suggestions, etc.  I'm glad to listen
+  and help.</p>
+
+
+<!-------------------------------    That's it!   --------------------------->
+</body>
+</html>

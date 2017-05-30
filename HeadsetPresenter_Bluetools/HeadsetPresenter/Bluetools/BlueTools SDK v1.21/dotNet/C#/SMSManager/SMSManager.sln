@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSManager", "SMSManager.csproj", "{DB6E0C85-9057-412A-BCA1-C11D04AC3C88}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB6E0C85-9057-412A-BCA1-C11D04AC3C88}.Debug.ActiveCfg = Debug|.NET
+		{DB6E0C85-9057-412A-BCA1-C11D04AC3C88}.Debug.Build.0 = Debug|.NET
+		{DB6E0C85-9057-412A-BCA1-C11D04AC3C88}.Release.ActiveCfg = Release|.NET
+		{DB6E0C85-9057-412A-BCA1-C11D04AC3C88}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,788 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HEADSETPRESENTER_DIALOG DIALOGEX 0, 0, 330, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Reconnect",IDC_BUTTON_RECONNECT,212,136,50,16
+    PUSHBUTTON      "Quit",IDCANCEL,273,136,50,16
+    LTEXT           "text",IDC_STATIC_HP_RECONNECT_INFO,159,35,144,50,0,
+                    WS_EX_TRANSPARENT
+    PUSHBUTTON      "Start Wizard",IDC_BUTTON_START_WIZARD,159,136,50,16
+    LISTBOX         IDC_APPNAME_LISTBOX,159,96,126,19,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Application to control:",IDC_STATIC_SELECT_APP,159,87,
+                    121,11
+    LTEXT           "Static",IDC_STATIC_WELCOME_MSG,159,6,144,45
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,287,100,23,10
+    PUSHBUTTON      "Settings",IDC_BTN_SETTINGS,7,137,50,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "w2solutions"
+            VALUE "FileDescription", "HeadsetPresenter.exe"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "HeadsetPresenter.exe"
+            VALUE "LegalCopyright", " (c) w2solutions.  All rights reserved."
+            VALUE "OriginalFilename", "HeadsetPresenter.exe"
+            VALUE "ProductName", "HeadsetPresenter"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_HEADSETPRESENTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+#ifdef _WIN32
+LANGUAGE LANG_SWEDISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DEVICE_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start Search",IDSTARTSTOP,213,117,58,17
+    PUSHBUTTON      "Cancel",IDCANCEL,233,171,50,16
+    LISTBOX         IDC_DEVICES,7,37,276,73,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Next >",IDC_OK,175,171,50,16,WS_DISABLED
+    PUSHBUTTON      "< Back",IDC_BACK,122,171,50,16,WS_DISABLED
+    LTEXT           "If you don't see the headset you want to add, make sure it is turned on and in pairable/discoverable mode. Follow the setup instructions that came with the headset and then click Search again.",
+                    IDC_WIZARD_DEV_INFO,15,117,181,41
+END
+
+IDD_WIZARD_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next",IDNEXT,175,173,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,233,173,50,14
+    CONTROL         "",IDC_WIZARD_PROGRESS_BAR,"msctls_progress32",WS_BORDER,
+                    21,123,185,14
+    PUSHBUTTON      "Nothing happens",IDC_BUTTON_STUCK,214,122,59,16
+    LTEXT           ".",IDC_WIZ_PROGRESS,21,34,246,84
+    DEFPUSHBUTTON   "< Back",IDBACK,121,173,50,14,WS_DISABLED
+END
+
+IDD_SERVICE_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,175,171,50,16,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,233,171,50,16,WS_DISABLED
+    LISTBOX         IDC_SERVICES_LIST,7,38,276,73,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Static",IDC_STATIC_SERVICE_INFO,7,115,269,44
+    DEFPUSHBUTTON   "< Back",IDNEXT2,121,171,50,16,WS_DISABLED
+END
+
+IDD_RECONNECT_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Retry",IDRETRY,175,173,50,14
+    PUSHBUTTON      "Start Wizard",IDWIZARD,120,173,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,233,173,50,14
+    LTEXT           "rec fail body",IDC_REC_FAIL_BODY,109,31,168,133
+    CONTROL         180,IDC_HS_CONNECTED,"Static",SS_BITMAP,7,56,15,13
+    LTEXT           "Here a connection to the PC exists for the BT500 headset. Click on the headset name to disconnect it. Then press Retry.",
+                    IDC_STATIC,8,107,81,49
+    GROUPBOX        "",IDC_STATIC,6,51,86,107
+    CONTROL         169,IDC_B_GREEN,"Static",SS_BITMAP,7,29,9,11
+    LTEXT           "Might be a problem",IDC_STATIC,19,30,82,9
+    CONTROL         166,IDC_B_WHITE,"Static",SS_BITMAP,7,42,9,11
+    LTEXT           "OK",IDC_STATIC,19,43,98,9
+END
+
+IDD_HPDIALOG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,26,50,16
+    LTEXT           "This dialog is never used and could probably be removed",
+                    IDC_STATIC,23,50,156,38
+END
+
+IDD_MANUAL_SERVICE_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,176,174,50,14
+    PUSHBUTTON      "< Back",IDCANCEL,122,174,50,14,WS_DISABLED
+    CONTROL         "Automatic",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,27,69,104,10
+    CONTROL         "Manual",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,26,108,
+                    39,10
+    LTEXT           "The wizard will select the proper Bluetooth service automatically.",
+                    IDC_MSERVICE_INFO1,33,83,223,22
+    LTEXT           "Manual service selection. Normally this is not needed.",
+                    IDC_MSERVICE_INFO2,34,121,223,23
+    LTEXT           "info here",IDC_MSERVICE_INFO,27,34,226,27
+    GROUPBOX        "",IDC_STATIC,23,61,227,83
+    PUSHBUTTON      "Cancel",IDCANCEL2,233,174,50,14
+END
+
+IDD_MODE_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,175,170,50,16
+    PUSHBUTTON      "< Back",IDBACK,121,170,50,16
+    CONTROL         "Normal",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,33,45,221,10
+    CONTROL         "Advanced",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,32,88,
+                    222,10
+    LTEXT           "+ Do not require an audio connection => saves battery. \n+ All configuration is handled by the HeadsetPresenter.\n-  Volume buttons might not work for all headsets.",
+                    IDC_MODE_INFO1,39,57,223,28
+    LTEXT           "+ AVRCP supported.\n+ Need audio connection to the PC (not with AVRCP).\n+ Volume buttons might work if they didn't in Normal mode.\n+ Speech control and voice feedback possible.\n-  Requires more user interaction.\n-  Not all wizard functionality available.",
+                    IDC_MODE_INFO2,41,100,223,50
+    GROUPBOX        "",IDC_STATIC,29,36,239,117
+    PUSHBUTTON      "Cancel",IDCANCEL3,233,170,50,16
+END
+
+IDD_INFO_DLG DIALOGEX 0, 0, 248, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,191,162,50,14
+    LTEXT           "info header",IDC_INFO_HEADER,7,7,218,17
+    LTEXT           "text",IDC_INFO_TEXT,7,41,234,88
+    LTEXT           "sub header",IDC_INFO_SUB_HEADER,7,27,209,16
+    CONTROL         "Do not display this message again",IDC_CHECK_DISP_AGAIN,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,
+                    132,124,10
+END
+
+IDD_WIZARD_COMPLETED_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Finish",IDFINISH,176,173,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,233,173,50,14,WS_DISABLED
+    PUSHBUTTON      "< Back",IDCANCEL2,122,173,50,14,WS_DISABLED
+    LTEXT           "wiz comp header",IDC_WIZ_COMP_HEADER,95,7,188,37
+    LTEXT           "wiz comp body",IDC_WIZ_COMP_BODY,96,45,181,71
+END
+
+IDD_MANUAL_CONNECT_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,233,170,50,16
+    PUSHBUTTON      "Next >",IDC_NEXT,175,170,50,16,WS_DISABLED
+    PUSHBUTTON      "< Back",IDC_BACK,122,170,50,16,WS_DISABLED
+    LTEXT           "Static",IDC_MANUAL_CON_INFO,100,30,175,33
+    LTEXT           "Static",IDC_MAN_CON_INFO2,100,72,183,95
+    PUSHBUTTON      "Help",IDC_BUTTON1,241,64,42,12
+END
+
+IDD_SETTINGS_DIALOG DIALOGEX 0, 0, 290, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDAPPLY,233,174,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,176,174,50,14
+    GROUPBOX        "",IDC_STATIC,7,34,121,23
+    CONTROL         "Automatic",IDC_RADIO_REPLUG_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,9,43,48,10
+    CONTROL         "Manual",IDC_RADIO_REPLUG_2,"Button",BS_AUTORADIOBUTTON,
+                    75,44,39,10
+    GROUPBOX        "",IDC_STATIC,162,35,121,24
+    CONTROL         "Both directions",IDC_RADIO_FB_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,164,46,60,10
+    CONTROL         "Forward only",IDC_RADIO_FB_2,"Button",
+                    BS_AUTORADIOBUTTON,226,47,57,10
+    GROUPBOX        "",IDC_SPEECH,7,94,276,65
+    CONTROL         "Speech control activated",IDC_CHECK_SPEECH_ACTIVE,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,
+                    108,96,8
+    CONTROL         "Voice feedback actived",IDC_CHECK_VOICE_FEEDBACK,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,138,92,8
+    CONTROL         "Speech only ",IDC_CHECK_SPEECH_ONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,128,92,8
+    PUSHBUTTON      "Train recognizer",IDTRAIN,209,100,65,14
+    PUSHBUTTON      "Download MS Speech",IDDOWNLOAD,123,128,73,14
+    LTEXT           "MS Speech is not installed",
+                    IDC_STATIC_SPEECH_NOT_INSTALLED,123,107,74,19
+    LTEXT           "Replugging",IDC_STATIC,7,29,36,8
+    LTEXT           "Volume button behaivour",IDC_STATIC,161,29,81,8
+    LTEXT           "Speech Control ",IDC_STATIC,7,89,52,8
+    CONTROL         "Require high confidence",IDC_CHECK_CONFIDENCE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,118,93,10
+    GROUPBOX        "",IDC_STATIC,7,64,121,23
+    CONTROL         "Always",IDC_RADIO_RESTART_1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,9,73,39,10
+    CONTROL         "Never",IDC_RADIO_RESTART_2,"Button",BS_AUTORADIOBUTTON,
+                    75,74,35,10
+    LTEXT           "Restart",IDC_STATIC,7,59,25,8
+    PUSHBUTTON      "Restore defaults",IDC_BTN_RESTORE,7,174,65,14
+    CONTROL         "Enable Test Mode",IDC_CHECK_TEST_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,147,92,8
+    GROUPBOX        "",IDC_STATIC,162,64,121,23
+    LTEXT           "Keep alive timer",IDC_STATIC,163,59,52,8
+    LISTBOX         IDC_KEEP_ALIVE_LB,166,72,69,12,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_AVRCP_DIALOG DIALOGEX 0, 0, 290, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL2,233,174,50,16,WS_DISABLED
+    PUSHBUTTON      "Next >",IDC_OK,177,174,50,16
+    PUSHBUTTON      "< Back",IDC_BACK,123,174,50,16,WS_DISABLED
+    LTEXT           "Static",IDC_AVRCP_HEADLINE,16,13,235,14
+    GROUPBOX        "",IDC_STATIC,60,108,158,48
+    CONTROL         "Yes  (AVRCP is supported)",IDC_RADIO_AVRCP_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,68,119,100,10
+    CONTROL         "No  (AVRCP is not supported)",IDC_RADIO_AVRCP_2,"Button",
+                    BS_AUTORADIOBUTTON,68,137,110,10
+    LTEXT           "What is AVRCP:\nAVRCP stands for Audio Video Remote Control Profile. If your headset supports it there will be buttons for forward, rewind, play and stop compared to only volume up and down for normal headsets.",
+                    IDC_STATIC,30,54,224,35
+    LTEXT           "Does your headset support the AVRCP profile?",
+                    IDC_STATIC,30,35,150,8
+    LTEXT           "AVRCP is not required to use the HeadsetPresenter but more options are available with AVRCP support.  ",
+                    IDC_STATIC,30,89,224,23
+END
+
+IDD_MANUAL_STACK_SELECTION DIALOGEX 0, 0, 290, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "HeadsetPresenter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL2,233,172,50,16,WS_DISABLED
+    PUSHBUTTON      "Next >",IDC_OK,180,173,50,16
+    PUSHBUTTON      "< Back",IDC_BACK,123,172,50,16,WS_DISABLED
+    LTEXT           "",IDC_STATIC_TEXT1,17,31,256,28
+    GROUPBOX        "",IDC_STATIC,18,85,189,76
+    CONTROL         "Microsoft",IDC_RADIO_MICROSOFT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,21,98,45,10
+    CONTROL         "Widcomm / Broadcom",IDC_RADIO_WIDCOMM,"Button",
+                    BS_AUTORADIOBUTTON,21,109,84,10
+    CONTROL         "IVT / BlueSoleil",IDC_RADIO_BLUESOLEIL,"Button",
+                    BS_AUTORADIOBUTTON,21,120,63,10
+    CONTROL         "Toshiba",IDC_RADIO_TOSHIBA,"Button",BS_AUTORADIOBUTTON,
+                    21,132,41,10
+    CONTROL         "Other / Don't know",IDC_RADIO_OTHER,"Button",
+                    BS_AUTORADIOBUTTON,21,143,77,10
+    LTEXT           "",IDC_STATIC_TEXT2,18,61,256,26
+END
+
+IDD_TOSHIBAINFO_DIALOG DIALOGEX 0, 0, 290, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL2,233,173,50,16,WS_DISABLED
+    PUSHBUTTON      "Next >",IDC_OK,177,173,50,16
+    PUSHBUTTON      "< Back",IDC_BACK,123,173,50,16,WS_DISABLED
+    LTEXT           "The Toshiba Bluetooth stack can be very sensitive.\nSometimes initiation of the HeadsetPresenter can fail if there is an active connection to any Bluetooth device (indicated with a green Bluetooth B).",
+                    IDC_STATIC,111,42,171,37
+    CONTROL         169,IDC_B_GREEN,"Static",SS_BITMAP,15,55,9,11
+    LTEXT           "Devices connected. ",IDC_STATIC,29,56,68,32
+    CONTROL         166,IDC_B_WHITE,"Static",SS_BITMAP,15,95,9,11
+    GROUPBOX        "",IDC_STATIC,7,40,98,86
+    LTEXT           "No devices connected",IDC_STATIC,29,96,71,8
+    LTEXT           "If the Toshiba applications hang or if other problems are seen, make sure that the B is white before proceeding.\n\nIf your headset support AVRCP some tips can be found in the ""HeadsetPresenter for Beginners guide"".",
+                    IDC_STATIC,110,81,173,62
+END
+
+IDD_APPLICATION_MANAGER DIALOGEX 0, 0, 290, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,233,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,176,175,50,14
+    EDITTEXT        IDC_EDIT1,130,25,114,13,ES_AUTOHSCROLL
+    CONTROL         "Window name contains",IDC_WILDCARD1,"Button",
+                    BS_AUTORADIOBUTTON,14,21,89,10
+    CONTROL         "Window name starts with",IDC_WILDCARD2,"Button",
+                    BS_AUTORADIOBUTTON,14,32,97,10
+    GROUPBOX        "Static",IDC_STATIC,7,7,266,42
+    LTEXT           "VolumeUpButton",IDC_STATIC_VOLUMEUP,15,74,54,8
+    LTEXT           "VolumeDownButton",IDC_STATIC_VOLUMEDOWN,15,90,63,8
+    LTEXT           "ConnectButton",IDC_STATIC_VOLUMEDOWN2,15,106,49,8
+    CONTROL         "",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    74,16,8
+    CONTROL         "",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    74,16,8
+    LTEXT           "CTRL",IDC_STATIC,94,60,18,8
+    LTEXT           "ALT",IDC_STATIC,123,61,13,8
+    LTEXT           "Virtual Key",IDC_STATIC,151,61,35,8
+    CONTROL         "",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    90,16,8
+    CONTROL         "",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    90,16,8
+    COMBOBOX        IDC_COMBO2,152,89,64,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    107,16,8
+    CONTROL         "",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    107,16,8
+    COMBOBOX        IDC_COMBO3,152,105,64,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,152,72,64,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_APP_EDIT_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,233,173,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,177,173,50,14
+    EDITTEXT        IDC_APP_EDIT,121,29,162,121,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "static",IDC_APP_EDIT_STATIC,7,28,109,121
+END
+
+IDD_AUDIO_SELECT DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,233,173,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,179,173,50,14
+    LISTBOX         IDC_AUDIO_LIST,142,123,141,21,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Static",IDC_STATIC_AUDIO,144,27,139,90
+END
+
+IDD_MANUAL_PIN_DIALOG DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,233,173,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,173,50,14,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_MANUAL_PIN,144,110,67,11,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_STATIC_PIN_MSG,130,42,140,48
+    LTEXT           "Pin:",IDC_STATIC,132,111,12,8
+END
+
+IDD_PREPARE_PAIRING DIALOGEX 0, 0, 290, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,178,171,50,16,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,233,171,50,16
+    CONTROL         "My headset is set up and ready to be found",
+                    IDC_CHECK_DEV_PREP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    127,130,156,10
+    DEFPUSHBUTTON   "< Back ",IDNEXT2,126,171,50,16,WS_DISABLED
+    LTEXT           "Static",IDC_STATIC_DEV_PREP,126,31,140,89
+END
+
+IDD_ACTIVE_CONNECTION_PROBLEM DIALOGEX 0, 0, 290, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL2,233,173,50,16,WS_DISABLED
+    PUSHBUTTON      "Next >",IDC_OK,177,173,50,16
+    PUSHBUTTON      "< Back",IDC_BACK,123,173,50,16,WS_DISABLED
+    CONTROL         180,IDC_HS_CONNECTED,"Static",SS_BITMAP,7,61,15,13
+    LTEXT           "Here a connection to the PC exists for the BT550 headset. Click on the headset name to disconnect it.",
+                    IDC_STATIC,10,114,81,45
+    GROUPBOX        "",IDC_STATIC,7,56,84,101
+    LTEXT           "Static",IDC_STATIC_EXISTING_CONNECTION_MSG,120,28,153,
+                    133
+    CONTROL         169,IDC_B_GREEN,"Static",SS_BITMAP,7,29,9,11
+    LTEXT           "Devices are connected. ",IDC_STATIC,17,30,82,9
+    CONTROL         166,IDC_B_WHITE,"Static",SS_BITMAP,7,42,9,11
+    LTEXT           "No devices are connected. ",IDC_STATIC,17,43,98,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DEVICE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+        HORZGUIDE, 37
+    END
+
+    IDD_WIZARD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_SERVICE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_RECONNECT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_HPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_MANUAL_SERVICE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_MODE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_INFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_WIZARD_COMPLETED_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_MANUAL_CONNECT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_SETTINGS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_AVRCP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_MANUAL_STACK_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_TOSHIBAINFO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_APPLICATION_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_APP_EDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_AUDIO_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_MANUAL_PIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_PREPARE_PAIRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_ACTIVE_CONNECTION_PROBLEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\HeadsetPresenter.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HeadsetPresenter.ico"
+IDI_HP_ICON_MASK        ICON                    "images\\new_logo_big2_32x32_mask.ico"
+IDI_HP_ICON             ICON                    "images\\new_logo_big2_32x32_mask2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_GIRL                BITMAP                  "images\\intro_girl.bmp"
+IDB_INVISIO             BITMAP                  "images\\INVISIO_Q7.bmp"
+IDB_JABRA250            BITMAP                  "images\\jabra_bt250v_image.bmp"
+IDB_NEWLOGO             BITMAP                  "images\\new_logo.bmp"
+IDB_LOGO_64x64          BITMAP                  "images\\logo\\logo_64x64.bmp"
+IDB_LOGO_50x50          BITMAP                  "images\\logo\\logo_50x50.bmp"
+IDB_WHITE_B             BITMAP                  "images\\b_white.bmp"
+IDB_GREEN_B             BITMAP                  "images\\b_green.bmp"
+IDB_HEADSET_CONNECTED   BITMAP                  "images\\HeadsetConnected.bmp"
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\HeadsetPresenter.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

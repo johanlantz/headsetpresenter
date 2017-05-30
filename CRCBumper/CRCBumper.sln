@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CRCBumper", "CRCBumper.vcproj", "{0C1E7A04-1E46-4895-9910-6BB4DD4DA169}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0C1E7A04-1E46-4895-9910-6BB4DD4DA169}.Debug.ActiveCfg = Debug|Win32
+		{0C1E7A04-1E46-4895-9910-6BB4DD4DA169}.Debug.Build.0 = Debug|Win32
+		{0C1E7A04-1E46-4895-9910-6BB4DD4DA169}.Release.ActiveCfg = Release|Win32
+		{0C1E7A04-1E46-4895-9910-6BB4DD4DA169}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+import "docobj.idl";
+
+
+[ version(1.0), uuid(D552FC04-2CC3-4FEE-AE16-41AA5010EBF2), helpstring("HPSpeech 1.0 Type Library") ]
+library HPSpeech
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+}
+

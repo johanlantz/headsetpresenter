@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "ObexServiceSampleCF", "ObexServiceSampleCF.csdproj", "{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Debug.ActiveCfg = Debug|Pocket PC
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Debug.Build.0 = Debug|Pocket PC
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Debug.Deploy.0 = Debug|Pocket PC
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Release.ActiveCfg = Release|Pocket PC
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Release.Build.0 = Release|Pocket PC
+		{98A1F7D4-2BC9-4512-9E0F-F051DECBDA8B}.Release.Deploy.0 = Release|Pocket PC
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

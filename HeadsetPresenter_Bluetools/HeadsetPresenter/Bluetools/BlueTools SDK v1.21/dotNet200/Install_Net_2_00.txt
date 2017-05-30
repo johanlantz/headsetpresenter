@@ -1,0 +1,17 @@
+For more info please visit 
+http://franson.com/bluetools
+http://franson.com/forum
+
+GET STARTED
+***********
+
+Start one of the samples and add a reference to
+Franson.BlueTools.200.dll   	(Must be referenced)
+Franson.Protocols.Obex.200.dll	(For OBEX support)
+Franson.Protocols.SMS.200.dll	(For AT and SMS support)
+
+Additional information:
+..\dotNet\bin\readme.txt
+
+http://franson.com/bluetools
+http://franson.com/forum

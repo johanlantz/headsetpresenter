@@ -1,0 +1,10 @@
+BlueSoliel
+Kräver manual eject
+
+Toshiba
+4.2.0.8 verkar fungera fint med unplug måste ha ny stack
+Problem att connecta headset 
+AVRCP fungerar
+Inget ljud 
+Måste välja att slå av receiving commands boxen under Other/AV Player/Display Position annars blir det krångel
+Verkar hänga sig om eject när B grönt, testa att göra WM_CLOSE på Managern

@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="HeadsetPresenter"
+	ProjectGUID="{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}"
+	RootNamespace="HeadsetPresenter"
+	Keyword="MFCProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories=".\Bluetools\libWindows\inc;.\BlueSoleil\BSProxy;&quot;..\Microsoft SDK\include&quot;;&quot;..\Microsoft Speech SDK 5.1\Include&quot;;&quot;C:\Projects\HeadsetPresenter_Bluetools\HeadsetPresenter\Generic Solution\Header Files&quot;;..\..\SS_Log_Src\SS_Log\SS_Log;.\;&quot;.\Dialogs\Header Files&quot;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;_SS_LOG_ACTIVE"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalOptions="/NODEFAULTLIB:LIBCMT"
+				AdditionalDependencies="BlueToolsLib.lib comsupp.lib setupapi.lib PushDLL.lib SS_Log.lib BSProxy.lib winmm.lib sapi.lib LicenseManagerAuthenticator.lib"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories=".\pushkeys\lib;.\Bluetools\libWindows;.\BlueSoleil\BSProxy\Debug;&quot;..\Microsoft Speech SDK 5.1\Lib\i386&quot;;..\..\LicenseManagerAuthenticator\Debug;..\..\SS_Log_Src\SS_Log\SS_Log\Release;&quot;..\Microsoft SDK\Lib&quot;"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories=".\Bluetools\libWindows\inc;.\BlueSoleil\BSProxy;&quot;..\Microsoft SDK\include&quot;;&quot;..\Microsoft Speech SDK 5.1\Include&quot;;&quot;C:\Projects\HeadsetPresenter_Bluetools\HeadsetPresenter\Generic Solution\Header Files&quot;;..\..\SS_Log_Src\SS_Log\SS_Log;.\;&quot;.\Dialogs\Header Files&quot;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_SS_LOG_ACTIVE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="0"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="BlueToolsLib.lib comsupp.lib setupapi.lib SS_Log.lib PushDLL.lib BSProxy.lib winmm.lib sapi.lib LicenseManagerAuthenticator.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories=".\Bluetools\libWindows;.\BlueSoleil\BSProxy\Debug;&quot;..\Microsoft Speech SDK 5.1\Lib\i386&quot;;.\pushkeys\lib;..\..\LicenseManagerAuthenticator\Debug;..\..\SS_Log_Src\SS_Log\SS_Log\Release;&quot;..\Microsoft SDK\Lib&quot;"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release_with_Log|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="&quot;C:\Program\Microsoft Speech SDK 5.1\Include&quot;;&quot;C:\Projects\HeadsetPresenter_Bluetools\HeadsetPresenter\Generic Solution\Header Files&quot;;&quot;C:\Program Files\Microsoft SDK\include&quot;;C:\projects\SS_Log_Src\SS_Log\SS_Log;.\;&quot;.\Dialogs\Header Files&quot;;&quot;C:\program\Franson\BlueTools SDK v1.2\libWindows\inc&quot;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_SS_LOG_ACTIVE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="0"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="BlueToolsLib.lib SS_Log.lib comsupp.lib setupapi.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;C:\Program\Microsoft Speech SDK 5.1\Lib\i386&quot;;&quot;C:\Program Files\Microsoft SDK\Lib&quot;;C:\Projects\SS_Log_Src\SS_Log\SS_Log\Release;&quot;C:\program\Franson\BlueTools SDK v1.2\libWindows&quot;"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="MS_Debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/D &quot;MS_STACK&quot;"
+				Optimization="0"
+				AdditionalIncludeDirectories=".\BlueSoleil\BSProxy;..\..\SS_Log_Src\SS_Log\SS_Log;&quot;..\Microsoft SDK\include&quot;;&quot;..\Microsoft Speech SDK 5.1\Include&quot;;&quot;.\Generic Solution\Header Files&quot;;.\;&quot;.\Dialogs\Header Files&quot;;.\Bluetools\libWindows\inc"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalOptions="/NODEFAULTLIB:LIBCMT"
+				AdditionalDependencies="BlueToolsLib.lib comsupp.lib setupapi.lib irprops.lib ws2_32.lib BSProxy.lib PushDLL.lib LicenseManagerAuthenticator.lib SS_Log.lib winmm.lib sapi.lib"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories=".\BlueSoleil\BSProxy\Debug;.\pushkeys\lib;..\..\LicenseManagerAuthenticator\Debug;..\..\SS_Log_Src\SS_Log\SS_Log\Release;&quot;..\Microsoft SDK\Lib&quot;;&quot;..\Microsoft Speech SDK 5.1\Lib\i386&quot;;.\Bluetools\libWindows"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="MS_Release|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/D &quot;MS_STACK&quot;"
+				AdditionalIncludeDirectories=".\BlueSoleil\BSProxy;..\..\SS_Log_Src\SS_Log\SS_Log;&quot;..\Microsoft SDK\include&quot;;&quot;..\Microsoft Speech SDK 5.1\Include&quot;;&quot;.\Generic Solution\Header Files&quot;;.\;&quot;.\Dialogs\Header Files&quot;;.\Bluetools\libWindows\inc"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_SS_LOG_ACTIVE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="0"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="BlueToolsLib.lib comsupp.lib setupapi.lib irprops.lib ws2_32.lib PushDLL.lib BSProxy.lib SS_Log.lib LicenseManagerAuthenticator.lib winmm.lib sapi.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories=".\BlueSoleil\BSProxy\Release\;.\pushkeys\lib;..\..\LicenseManagerAuthenticator\Release;..\..\SS_Log_Src\SS_Log\SS_Log\Release;&quot;..\Microsoft SDK\Lib&quot;;&quot;..\Microsoft Speech SDK 5.1\Lib\i386&quot;;.\Bluetools\libWindows"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="MS_Release_with_Log|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/D &quot;MS_STACK&quot;"
+				AdditionalIncludeDirectories="&quot;C:\Program\Microsoft Speech SDK 5.1\Include&quot;;&quot;C:\Projects\HeadsetPresenter_Bluetools\HeadsetPresenter\Generic Solution\Header Files&quot;;&quot;C:\Program Files\Microsoft SDK\include&quot;;C:\projects\SS_Log_Src\SS_Log\SS_Log;.\;&quot;.\Dialogs\Header Files&quot;;&quot;C:\program\Franson\BlueTools SDK v1.2\libWindows\inc&quot;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_SS_LOG_ACTIVE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="0"
+				TreatWChar_tAsBuiltInType="FALSE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="BlueToolsLib.lib SS_Log.lib comsupp.lib setupapi.lib irprops.lib ws2_32.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;C:\Program\Microsoft Speech SDK 5.1\Lib\i386&quot;;&quot;C:\Program Files\Microsoft SDK\Lib&quot;;C:\Projects\SS_Log_Src\SS_Log\SS_Log\Release;&quot;C:\program\Franson\BlueTools SDK v1.2\libWindows&quot;"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="..\..\CRCBumper\Release\CRCBumper &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\CRC\hp.crc&quot;
+type &quot;$(ProjectDir)\CRC\hp.crc&quot; &gt;&gt; &quot;$(TargetPath)&quot;
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\ApplicationControl.cpp">
+			</File>
+			<File
+				RelativePath=".\BluetoolsController.cpp">
+			</File>
+			<File
+				RelativePath=".\BSController.cpp">
+			</File>
+			<File
+				RelativePath=".\ControllerFactory.cpp">
+			</File>
+			<File
+				RelativePath=".\HeadsetPresenter.cpp">
+			</File>
+			<File
+				RelativePath=".\HeadsetPresenterDlg.cpp">
+			</File>
+			<File
+				RelativePath=".\HPDialog.cpp">
+			</File>
+			<File
+				RelativePath=".\MicrosoftController.cpp">
+			</File>
+			<File
+				RelativePath=".\SettingsControl.cpp">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release_with_Log|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MS_Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MS_Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MS_Release_with_Log|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\SuperController.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\ApplicationControl.h">
+			</File>
+			<File
+				RelativePath=".\BluetoolsController.h">
+			</File>
+			<File
+				RelativePath=".\BSController.h">
+			</File>
+			<File
+				RelativePath=".\ControllerFactory.h">
+			</File>
+			<File
+				RelativePath=".\defines.h">
+			</File>
+			<File
+				RelativePath=".\HeadsetPresenter.h">
+			</File>
+			<File
+				RelativePath=".\HeadsetPresenterDlg.h">
+			</File>
+			<File
+				RelativePath=".\HPDialog.h">
+			</File>
+			<File
+				RelativePath=".\MicrosoftController.h">
+			</File>
+			<File
+				RelativePath=".\Resource.h">
+			</File>
+			<File
+				RelativePath=".\SettingsControl.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\SuperController.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\images\b_green.bmp">
+			</File>
+			<File
+				RelativePath=".\images\b_white.bmp">
+			</File>
+			<File
+				RelativePath=".\images\HeadsetConnected.bmp">
+			</File>
+			<File
+				RelativePath=".\res\HeadsetPresenter.ico">
+			</File>
+			<File
+				RelativePath=".\HeadsetPresenter.rc">
+			</File>
+			<File
+				RelativePath=".\res\HeadsetPresenter.rc2">
+			</File>
+			<File
+				RelativePath=".\images\intro_girl.bmp">
+			</File>
+			<File
+				RelativePath=".\images\INVISIO_Q7.bmp">
+			</File>
+			<File
+				RelativePath=".\images\jabra_bt250v_a.bmp">
+			</File>
+			<File
+				RelativePath=".\images\jabra_bt250v_image.bmp">
+			</File>
+			<File
+				RelativePath=".\images\logo\logo_50x50.bmp">
+			</File>
+			<File
+				RelativePath=".\images\logo\logo_64x64.bmp">
+			</File>
+			<File
+				RelativePath=".\images\new_logo.bmp">
+			</File>
+			<File
+				RelativePath=".\images\new_logo_big2_32x32.ico">
+			</File>
+			<File
+				RelativePath=".\images\new_logo_big2_32x32_mask.ico">
+			</File>
+			<File
+				RelativePath=".\images\new_logo_big2_32x32_mask2.ico">
+			</File>
+		</Filter>
+		<Filter
+			Name="Dialogs"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath=".\Dialogs\Source Files\AlreadyConnectedToAGDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ApplicationDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ApplicationEditDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\AudioSelectDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\AVRCPDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\DeviceDiscoveryDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\InfoDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ManualConnectDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ManualPinDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ManualServiceDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ManualStackDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ModeDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\PreparePairingDlg.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ReconnectFailedDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ServiceDiscoveryDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\SettingsDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\ToshibaInfoDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\WizardCompletedDialog.cpp">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Source Files\WizardDialog.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\Dialogs\Header Files\AlreadyConnectedToAGDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ApplicationDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ApplicationEditDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\AudioSelectDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\AVRCPDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\DeviceDiscoveryDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\InfoDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ManualConnectDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ManualPinDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ManualServiceDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ManualStackDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ModeDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\PreparePairingDlg.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ReconnectFailedDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ServiceDiscoveryDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\SettingsDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\ToshibaInfoDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\WizardCompletedDialog.h">
+				</File>
+				<File
+					RelativePath=".\Dialogs\Header Files\WizardDialog.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Notes"
+			Filter="">
+			<File
+				RelativePath=".\bugs.txt">
+			</File>
+			<File
+				RelativePath=".\BuildIssues.txt">
+			</File>
+			<File
+				RelativePath=".\Design.txt">
+			</File>
+			<File
+				RelativePath=".\Headsets.txt">
+			</File>
+			<File
+				RelativePath=".\notes.txt">
+			</File>
+			<File
+				RelativePath=".\Stacks.txt">
+			</File>
+		</Filter>
+		<Filter
+			Name="LicenseManager"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath=".\LicenseManager\Source Files\LicenseManagerProxy.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\LicenseManager\Header Files\LicenseManagerProxy.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="pushkeys"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath=".\pushkeys\Source Files\pushkeys.c">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release_with_Log|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="MS_Debug|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="MS_Release|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="MS_Release_with_Log|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\pushkeys\Header Files\PushDLL.h">
+				</File>
+				<File
+					RelativePath=".\pushkeys\Header Files\pushkeys.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Generic Solution"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath=".\Generic Solution\Source Files\device.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\devicemgr.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\FileParser.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\GenericController.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\IoControl.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\multisz.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\servicemgr.cpp">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Source Files\SnoopControl.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\USBSnoop\Shared\Common.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\device.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\devicemgr.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\FileParser.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\GenericController.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\IoControl.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\multisz.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\resource.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\servicemgr.h">
+				</File>
+				<File
+					RelativePath=".\Generic Solution\Header Files\SnoopControl.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Speech"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath=".\Speech\Source Files\HPSpeech.cpp">
+				</File>
+				<File
+					RelativePath=".\Speech\Source Files\MixerControl.cpp">
+				</File>
+				<File
+					RelativePath=".\Speech\Source Files\SAPI.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\Speech\Header Files\gramdef.h">
+				</File>
+				<File
+					RelativePath=".\Speech\Header Files\MixerControl.h">
+				</File>
+				<File
+					RelativePath=".\Speech\Header Files\SAPI.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="Grammar"
+				Filter="">
+				<File
+					RelativePath=".\Speech\Grammar\HPGrammar.xml">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; /h &quot;$(ProjectDir)\Speech\Header Files\gramdef.h&quot;  &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+"
+							Outputs="$(ProjectDir)\Speech\Grammar\HPGrammar.cfg;$(ProjectDir)\Speech\Header Files\gramdef.h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; /h &quot;$(ProjectDir)\Speech\Header Files\gramdef.h&quot;  &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+"
+							Outputs="$(ProjectDir)\Speech\Grammar\HPGrammar.cfg;$(ProjectDir)\Speech\Header Files\gramdef.h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="MS_Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; /h &quot;$(ProjectDir)\Speech\Header Files\gramdef.h&quot;  &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+"
+							Outputs="$(ProjectDir)\Speech\Grammar\HPGrammar.cfg;$(ProjectDir)\Speech\Header Files\gramdef.h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="MS_Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Performing Custom Build Step on HPGrammar.xml"
+							CommandLine="&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+&quot;..\Microsoft Speech SDK 5.1\Bin\gc&quot; /h &quot;$(ProjectDir)\Speech\Header Files\gramdef.h&quot;  &quot;$(ProjectDir)\Speech\Grammar\$(InputFileName)&quot;
+"
+							Outputs="$(ProjectDir)\Speech\Grammar\HPGrammar.cfg;$(ProjectDir)\Speech\Header Files\gramdef.h"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="BlueSoleil Solution"
+			Filter="">
+			<Filter
+				Name="Header Files"
+				Filter="">
+				<File
+					RelativePath=".\BlueSoleil\BSProxy\SoleilProxy.h">
+				</File>
+			</Filter>
+		</Filter>
+		<File
+			RelativePath=".\res\HeadsetPresenter.manifest">
+		</File>
+		<File
+			RelativePath=".\ReadMe.txt">
+		</File>
+	</Files>
+	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="HeadsetPresenter.rc"/>
+	</Globals>
+</VisualStudioProject>

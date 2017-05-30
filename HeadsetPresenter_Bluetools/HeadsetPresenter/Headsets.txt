@@ -1,0 +1,8 @@
+BT135: Skickar man +BRSF som svar så slutar headset svara helt
+Skickas ERROR så fortsätter man och dessutom funkar +VGS
+
+BT250 v1.7 Skickar man inte CHLD så funkar +VGS. Skickas CHLD så funkar inte VGS 
+
+250 och 500, hela sekvensen går igenom men VGS skickas ej. BVRA skickas dock på connect knappen
+
+BT135 skickar VGS även om =15 , 320 gör det inte.

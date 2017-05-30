@@ -1,0 +1,6 @@
+Helt plötsligt byggde inte MS_Release, fick fel i GenericController inga SC_HANDLES
+eller liknande hittades. Fixade sig genom Beyond Compare, visade att MS_Release
+inte körde precompile headers. Funkade när det ändrades, inte utrett varför.
+
+Om länkfel i BS dll så glöm inte att bygga om BSProxy projektet och se till så att
+dll kopierats till alla kataloger.

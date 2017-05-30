@@ -1,0 +1,4 @@
+We should most likely send minVersionAllowed to net or the version number should be returned from the net, otherwise we will approve even old license codes. MinAllowedVersion is only used to verify an old license file
+
+discoveredServices should probaly be deleted after use in servicediscoverydialog
+they are allocated by the controllers with new

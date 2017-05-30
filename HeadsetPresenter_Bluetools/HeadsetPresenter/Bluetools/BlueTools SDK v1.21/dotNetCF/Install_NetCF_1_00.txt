@@ -1,0 +1,64 @@
+For more info please visit 
+http://franson.com/bluetools
+http://franson.com/forum
+
+GET STARTED
+***********
+
+Start one of the samples and add a reference to
+Franson.BlueTools.dll   	(Must be referenced)
+Franson.Protocols.Obex.dll	(For OBEX support)
+Franson.Protocols.SMS.dll	(For AT and SMS support)
+
+
+Native DLLs BlueTools.dll, BlueToolsMS.dll, BlueToolsWC.dll and BlueToolsWC150.dll should be placed 
+in the same directory as your application EXE or under \Windows.
+
+You find the native DLLs under wince420\ for each processor. If there are no DLLs for your processor, please
+contact support@franson.com
+
+Or use the CAB files to install all native DLLs above under \Windows.
+
+
+It is recommended that your application places the above DLLs and your EXE in the same directory
+(not in \Windows) this will allow multiple versions of BlueTools to run on the same device at the same time.
+
+Your application also needs Franson.BlueTools.*.dll in the same directory as your EXE or registered in the GAC.
+
+Details for each DLL
+
+Franson.BlueTools.dll  
+Managed assembly. .NET 1.1 and .NET CF 1.0
+Must always be in same directory as application EXE or registered in GAC.
+
+Franson.BlueTools.200.dll  
+Managed assembly. .NET 2.0
+Must always be in same directory as application EXE or registered in GAC.
+
+Franson.BlueTools.200.CF.dll  
+Managed assembly. .NET CF 2.0
+Must always be in same directory as application EXE or registered in GAC.
+
+BlueTools.dll
+Native DLL. Not optional.
+Must be included in application EXE or placed in system32 directory
+
+BlueToolsMS.dll
+Native DLL. Optional support for Microsoft stack.
+Should be included in application EXE or placed in system32 directory
+
+BlueToolsWC.dll
+Native DLL. Optional support for WidComm stack.
+Should be included in application EXE or placed in system32 directory
+
+BlueToolsWC150.dll
+Native DLL. Optional support for extra features in WidComm stack, see reference manual.
+Should be included in application EXE or placed in system32 directory
+You aplpication will work without this DLL on the WidComm stack, but some methods might return default values.
+
+It is recommended to distribute all DLLs.
+The only reason to not do it, is if your target system has limited memory resources.
+
+For more info please visit 
+http://franson.com/bluetools
+http://franson.com/forum

@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LicenseManager", "LicenseManager.vcproj", "{12CEE317-025F-4C04-BF87-6BB57CEF921C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LicenseManagerPS", "LicenseManagerPS.vcproj", "{788B4A39-0338-4E5F-80F2-2AE272844DC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C} = {12CEE317-025F-4C04-BF87-6BB57CEF921C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Release with Log = Release with Log
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Debug.ActiveCfg = Debug|Win32
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Debug.Build.0 = Debug|Win32
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Release.ActiveCfg = Release|Win32
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Release.Build.0 = Release|Win32
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Release with Log.ActiveCfg = Release with Log|Win32
+		{12CEE317-025F-4C04-BF87-6BB57CEF921C}.Release with Log.Build.0 = Release with Log|Win32
+		{788B4A39-0338-4E5F-80F2-2AE272844DC9}.Debug.ActiveCfg = Debug|Win32
+		{788B4A39-0338-4E5F-80F2-2AE272844DC9}.Release.ActiveCfg = Release|Win32
+		{788B4A39-0338-4E5F-80F2-2AE272844DC9}.Release with Log.ActiveCfg = Release|Win32
+		{788B4A39-0338-4E5F-80F2-2AE272844DC9}.Release with Log.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

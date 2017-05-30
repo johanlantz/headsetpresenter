@@ -1,0 +1,17 @@
+TARGETNAME=usbsnoop
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+UMTYPE=NT
+
+TARGETLIBS=\
+	$(SDK_LIB_PATH)\kernel32.lib    \
+	$(SDK_LIB_PATH)\user32.lib      \
+	$(SDK_LIB_PATH)\gdi32.lib       \
+	$(SDK_LIB_PATH)\comctl32.lib    \
+	$(SDK_LIB_PATH)\cfgmgr32.lib
+
+SOURCES=DriverEntry.cpp \
+	RemoveLock.cpp \
+	stddcls.cpp
+

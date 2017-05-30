@@ -1,0 +1,8 @@
+16/12/2002 Benoit PAPILLAULT <benoit.papillault@free.fr>
+
+  Replace C:\NTDDK by %NTDDK% : 
+  Replace C:\98DDK by %98DDK% : 
+
+  To define such variables under Windows XP:
+  "Demarrer" => "Parametres" => "Panneau de configuration" =>
+  "Systeme" => "Avance" => "Variables d'environnement" 

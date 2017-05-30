@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeadsetPresenter", "HeadsetPresenter.vcproj", "{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		MS_Debug = MS_Debug
+		MS_Release = MS_Release
+		MS_Release_with_Log = MS_Release_with_Log
+		Release = Release
+		Release_with_Log = Release_with_Log
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Debug.ActiveCfg = Debug|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Debug.Build.0 = Debug|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Debug.ActiveCfg = MS_Debug|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Debug.Build.0 = MS_Debug|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Release.ActiveCfg = MS_Release|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Release.Build.0 = MS_Release|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Release_with_Log.ActiveCfg = MS_Release_with_Log|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.MS_Release_with_Log.Build.0 = MS_Release_with_Log|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Release.ActiveCfg = Release|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Release.Build.0 = Release|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Release_with_Log.ActiveCfg = Release_with_Log|Win32
+		{1A6D5566-C4EA-46E1-B69F-0AE8696D0566}.Release_with_Log.Build.0 = Release_with_Log|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

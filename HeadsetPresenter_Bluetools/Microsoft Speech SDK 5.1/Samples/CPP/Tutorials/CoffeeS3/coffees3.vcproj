@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="CoffeeS3"
+	ProjectGUID="{86D93BCF-A7A4-4B6C-9836-E31033938C31}"
+	SccProjectName=""
+	SccLocalPath="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug x86|Win32"
+			OutputDirectory=".\Debug x86"
+			IntermediateDirectory=".\Debug x86"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\..\..\include,..\..\..\..\..\ddk\include"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Debug x86/coffees3.pch"
+				AssemblerListingLocation=".\Debug x86/"
+				ObjectFile=".\Debug x86/"
+				ProgramDataBaseFileName=".\Debug x86/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile=".\Debug x86/coffees3.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="..\..\..\..\lib\i386"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile=".\Debug x86/coffees3.pdb"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Debug x86/coffees3.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release x86|Win32"
+			OutputDirectory=".\Release x86"
+			IntermediateDirectory=".\Release x86"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="..\..\..\..\include,..\..\..\..\..\ddk\include"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release x86/coffees3.pch"
+				AssemblerListingLocation=".\Release x86/"
+				ObjectFile=".\Release x86/"
+				ProgramDataBaseFileName=".\Release x86/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile=".\Release x86/coffees3.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="..\..\..\..\lib\i386"
+				ProgramDatabaseFile=".\Release x86/coffees3.pdb"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Release x86/coffees3.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="coffee.cpp">
+				<FileConfiguration
+					Name="Debug x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+						BasicRuntimeChecks="3"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="display.cpp">
+				<FileConfiguration
+					Name="Debug x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+						BasicRuntimeChecks="3"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="StdAfx.cpp">
+				<FileConfiguration
+					Name="Debug x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+						BasicRuntimeChecks="3"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release x86|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="coffee.h">
+			</File>
+			<File
+				RelativePath="common.h">
+			</File>
+			<File
+				RelativePath="resource.h">
+			</File>
+			<File
+				RelativePath="StdAfx.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File
+				RelativePath="coffee.ICO">
+			</File>
+			<File
+				RelativePath="coffee.rc">
+			</File>
+			<File
+				RelativePath="SMALL.ICO">
+			</File>
+		</Filter>
+		<Filter
+			Name="Grammar"
+			Filter="xml">
+			<File
+				RelativePath="coffee.xml">
+				<FileConfiguration
+					Name="Debug x86|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\..\..\bin\gc &quot;$(InputName)&quot;
+..\..\..\..\bin\gc /h cofgram.h &quot;$(InputName)&quot;
+"
+						Outputs="$(ProjectDir)coffee.cfg;$(ProjectDir)cofgram.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release x86|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\..\..\bin\gc &quot;$(InputName)&quot;
+..\..\..\..\bin\gc /h cofgram.h &quot;$(InputName)&quot;
+"
+						Outputs="$(ProjectDir)coffee.cfg;$(ProjectDir)cofgram.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<File
+			RelativePath="coffee.cfg">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

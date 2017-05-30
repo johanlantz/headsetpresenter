@@ -1,0 +1,27 @@
+HKCR
+{
+	LicenseManager.LicenseHandler.1 = s 'LicenseHandler Class'
+	{
+		CLSID = s '{08DE6FB7-8068-457f-BD7F-C63F647177D9}'
+	}
+	LicenseManager.LicenseHandler = s 'LicenseHandler Class'
+	{
+		CLSID = s '{08DE6FB7-8068-457f-BD7F-C63F647177D9}'
+		CurVer = s 'LicenseManager.LicenseHandler.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {08DE6FB7-8068-457f-BD7F-C63F647177D9} = s 'LicenseHandler Class'
+		{
+			ProgID = s 'LicenseManager.LicenseHandler.1'
+			VersionIndependentProgID = s 'LicenseManager.LicenseHandler'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{4BCB7266-E019-40f0-87EC-172879C9920D}'
+		}
+	}
+}

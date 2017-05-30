@@ -1,0 +1,71 @@
+Pushkeys observations
+1. The window handling does not seem to affect flickering at all.
+2. If VK is replaced with normal keys for instance VK_N -> n it seems as the flicker stops
+3. The DLL lib seems faster then the standard pushkeys.
+4. keyb_event has been deprecated, try SetInput if problem persists
+
+Design of string sent to database:
+Spaces can occur in headset or dongle names << are unlikely to appear though:
+Only issue is lenght of QueryString but I think that is more then 2000 chars.
+--------------
+[tag1]:=<<value>> [tag2]:=<<value2>> 
+example 
+ver:=<<3.0>> stack:=<<1>> hsname:=<<Jabra 135>> donglename:=<<Generic Bluetooth device>>
+--------------------
+
+AVRCP skickar connection_req om bara hs är pairat med datorn, ingen länk verkar behövas innan 
+men jag antar att det går snabbare om det finns tex en headset länk uppe.
+
+Issue: CoInitialize must be called from the same thread as OnReadComplete
+Solution: myPPProxy is created immidiatly by CHeadsetPresenterDlg but it is started by
+the CommandCallback routine that is called by OnReadComplete. By doing that CoInitialize is 
+called only once and by the OnReadComplete thread. We need CoInit both for licensemanager and 
+for the ppControl
+
+ppControl may have been created without CreateLicenseManagerProxyAndCheckLicense()
+have beeing called, therefor ppControl should always be deleted by the proxy BUT
+we must check if we should delete myLicManProxy
+If no commands has been sent to HeadsetPresenterDlg->CommandCallback, the proxy is only created not started.
+
+Issue;
+Sometimes when pressing VGS button on HS the VGS=7 command is not taken care of befoer the next
+VGS command is sent, for instance:
+
+AG                  HS
+					Initially at VGS=7
+VGS=9   <-
+		->			VGS=7  this is not handled until after VGS=11 has gone away
+VGS=11	<-
+VGS=9	<-			Here VGS=7 is set in HS but now 9 < 11 and we move backward when we should move forward
+
+So lastVGS = newVGS does not work unless we can guarantee that each VGS from AG is processed before
+the next VGS leaves the HS. This cannot be done.
+
+Proposed solution:
+If Handsfree profile:
+In HFP we can use the +VGS from AG, solve the speed problem by always comparing with 7
+if newVGS > 7 then forward
+else backward
+
+Then we have all numbers [8,15] for forward, VGS=7 is always sent but we can send atleast 4 VGS 
+before the +VGS=7 must kick in.
+
+Problem for HFP
+If the HS does not support +VGS from AG this will not work, must be checked by the wizard
+
+Solution:
+If AG VGS is not supported and repeat of VGS=15 does not work then forward only mode must be used. 
+Wizard must support this for HFP:
+
+WIZARD behaivour:
+Hands-Free
+1. Is VGS=15 repeated -> All fine do not send +VGS=7 from AG comapre with lastVGS
+2. VGS=15 is not repeated but +VGS=7 works. -> Use VGS=7 and compare with <>7 
+3. VGS=15 is not supported, +VGS=7 does not work but VGS commands arrive. -> Use forward only mode
+4. No VGS commands. -> Use Headset profile
+
+Headset
+1. Is VGS=15 repeated -> All fine do not send +VGS=7 from AG comapare with lastVGS
+2. VGS=15 is not repeated but +VGS=7 works. -> Use VGS=7 and compare with <>7 
+3. VGS=15 is not supported, +VGS=7 does not work but VGS commands arrive. -> Use forward only mode
+4. No VGS commands. -> Use CKPD command

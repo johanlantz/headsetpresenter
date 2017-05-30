@@ -1,0 +1,5 @@
+Ipaq 4150
+
+Copy Ipaq4150\BtCoreIf.dll and Ipaq4150\BtSdkCE30.dll to \Windows on the device
+
+This should not be done for any other devices!

@@ -1,0 +1,9 @@
+; LicenseManager.def : Declares the module parameters.
+
+LIBRARY      "LicenseManager.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

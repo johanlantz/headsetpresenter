@@ -1,0 +1,50 @@
+Licence agreement
+Product name:
+
+Headset Presenter, VERSION 3.5
+
+END-USER LICENCE AGREEMENT for v3.5, Headset Presenter
+
+IMPORTANT-READ CAREFULLY: This End-User Licence Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) 
+and w2solutions (Johan Rosenquist) ("AUTHOR") for the software product identified above which may include associated software components, media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT"). By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the SOFTWARE PRODUCT.
+
+The SOFTWARE PRODUCT is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
+The SOFTWARE PRODUCT is licenced, not sold.
+
+1. GRANT OF LICENCE. The SOFTWARE PRODUCT is licenced as follows:
+
+The licence is granted only upon payment of the list value of the licence to THE AUTHOR, either directly, or via an AUTHOR approved supplier. 
+
+Installation and Use: THE AUTHOR grants you the right to install and use copies of the SOFTWARE PRODUCT on your computers running validly licenced copies of the operating system for which the SOFTWARE PRODUCT was designed.
+
+The UNLICENCED EVALUATION EDITION may be freely distributed in its original form.
+
+Backup Copies. You may also make copies of the SOFTWARE PRODUCT as may be necessary for backup and archival purposes. 
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
+
+Maintenance of Copyright Notices. You must not remove or alter any copyright notices on all copies of the SOFTWARE PRODUCT. 
+Distribution. You may not distribute copies of the SOFTWARE PRODUCT to third parties. 
+Prohibition on Reverse Engineering, Decompilation, and Disassembly. You may not reverse engineer, decompile, or disassemble the SOFTWARE PRODUCT, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation. Modification of distributed files is also expressly forbidden. 
+Rental and transfer. You may not rent, lease, grant a security interest in, or otherwise transfer rights to the SOFTWARE PRODUCT. 
+
+Compliance with Applicable Laws. You must comply with all applicable laws regarding use of the SOFTWARE PRODUCT. 
+
+3. TERMINATION. Without prejudice to any other rights, THE AUTHOR may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT.
+
+4. COPYRIGHT. All title, including but not limited to copyrights, in and to the SOFTWARE PRODUCT and any copies thereof are owned by THE AUTHOR. 
+All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE PRODUCT is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by THE AUTHOR.
+
+5. RETURN POLICY. This product does NOT offer a return of purchase program. It is the users responsibility to use the UNLICENCED EVALUATION EDITION prior to purchasing to full version. By doing this the user can verify that the software is compliant with the users configuration .
+
+6. LIMITATION ON REMEDIES; NO CONSEQUENTIAL OR OTHER DAMAGES. Your exclusive remedy for any breach of this Limited Warranty is as set forth below. Except for any refund elected by w2solutions, YOU ARE NOT ENTITLED TO ANY DAMAGES, INCLUDING BUT NOT LIMITED TO CONSEQUENTIAL DAMAGES, if the Software does not meet w2solutions's Limited Warranty, and, to the maximum extent allowed by applicable law, even if any remedy fails of its essential purpose. The terms of Section 17 ("Exclusion of Incidental, Consequential and Certain Other Damages") are also incorporated into this Limited Warranty. Some states /jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you. This Limited Warranty gives you specific legal rights. You may have other rights which vary from state/jurisdiction to state/jurisdiction. YOUR EXCLUSIVE REMEDY. w2solutions's and its suppliers' entire liability and your exclusive remedy for any breach of this Limited Warranty or for any other breach of this EULA or for any other liability relating to the Software shall be, at w2solutions's option from time to time exercised subject to applicable law, (a) return of the amount paid (if any) for the Software, or (b) repair or replacement of the Software, that does not meet this Limited Warranty and that is returned to w2solutions with a copy of your receipt. You will receive the remedy elected by w2solutions without charge, except that you are responsible for any expenses you may incur (e.g. cost of shipping the Software to w2solutions). This Limited Warranty is void if failure of the Software has resulted from accident, abuse, misapplication, abnormal use or a virus. Any replacement Software will be warranted for the remainder of the original warranty period or thirty (30) days, whichever is longer, and w2solutions will use commercially reasonable efforts to provide your remedy within a commercially reasonable time of your compliance with w2solutions's warranty remedy procedures. 
+
+7. DISCLAIMER OF WARRANTIES. The Limited Warranty that appears above is the only express warranty made to you and is provided in lieu of any other express warranties or similar obligations (if any) created by any advertising, documentation, packaging, or other communications. Except for the Limited Warranty and to the maximum extent permitted by applicable law, w2solutions and its suppliers provide the Software and support services (if any) AS IS AND WITH ALL FAULTS, and hereby disclaim all other warranties and conditions, whether express, implied or statutory, including, but not limited to, any (if any) implied warranties, duties or conditions of merchantability, of fitness for a particular purpose, of reliability or availability, of accuracy or completeness of responses, of results, of workmanlike effort, of lack of viruses, and of lack of negligence, all with regard to the Software, and the provision of or failure to provide support or other services, information, software, and related content through the Software or otherwise arising out of the use of the Software. ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THE SOFTWARE.
+
+8. EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL w2solutions OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT OR OTHER SERVICES, INFORMATON, SOFTWARE, AND RELATED CONTENT THROUGH THE SOFTWARE OR OTHERWISE ARISING OUT OF THE USE OF THE SOFTWARE, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS EULA, EVEN IN THE EVENT OF THE FAULT, TORT (INCLUDING NEGLIGENCE), MISREPRESENTATION, STRICT LIABILITY, BREACH OF CONTRACT OR BREACH OF WARRANTY OF w2solutions OR ANY SUPPLIER, AND EVEN IF w2solutions OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+
+9. LIMITATION OF LIABILITY AND REMEDIES. Notwithstanding any damages that you might incur for any reason whatsoever (including, without limitation, all damages referenced herein and all direct or general damages in contract or anything else), the entire liability of w2solutions and any of its suppliers under any provision of this EULA and your exclusive remedy hereunder (except for any remedy of repair or replacement elected by w2solutions with respect to any breach of the Limited Warranty) shall be limited the amount actually paid by you for the Software or US$5.00. The  limitations, exclusions and disclaimers in this document shall apply to the maximum extent permitted by applicable law, even if any remedy fails its essential purpose.
+
+10. NO WARRANTIES. THE AUTHOR expressly disclaims any warranty for the SOFTWARE PRODUCT. THE SOFTWARE PRODUCT AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE SOFTWARE PRODUCT REMAINS WITH YOU.
+
+11. BASIC INFORMATION. Upon registration of this product basic information concerning your system may be sent to the registrator. Information might include but is not limited to, version of application, name of headset, name of USB device and version of OS used.

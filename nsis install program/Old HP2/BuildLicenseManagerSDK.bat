@@ -1,0 +1,1 @@
+"D:\Program Files\NSIS\makensis" "C:\Projects\nsis install program\LicenseManagerSDK.nsi"

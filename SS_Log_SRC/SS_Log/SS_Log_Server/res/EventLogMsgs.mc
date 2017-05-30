@@ -1,0 +1,19 @@
+;////////////////////////////////////////////////////////////////////////////
+;//
+;//  FILENAME:	SS_Log.cpp
+;//  AUTHOR:	Steve Schaneville
+;//  CREATED:	23 Jan 2003, 16:54
+;//
+;//  PURPOSE:	
+;//
+;//  Copyright (c) 2003
+;//  z_web_master@yahoo.com
+;//
+;////////////////////////////////////////////////////////////////////////////
+
+MessageId=
+SymbolicName=SSLOG_BLANK_STRING
+Language=English
+%1
+.
+

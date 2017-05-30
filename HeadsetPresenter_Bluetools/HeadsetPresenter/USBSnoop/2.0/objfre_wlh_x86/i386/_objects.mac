@@ -1,0 +1,23 @@
+MUI_386_OBJECTS= \
+ $O\filter.res
+
+386_OBJECTS= \
+ $O\filter.res \
+ $O\buffer.obj \
+ $O\logprint.obj \
+ $O\strings.obj \
+ $O\filter.obj \
+ $O\logging.obj
+
+
+_RES_FILE=$O\filter.res
+PRECOMPILED_INCLUDE_BASENAME=precomp.h
+
+
+
+
+# lowercased
+BASEDIR=d:\winddk\6000
+OBJECT_ROOT=d:\winddk\6000
+MAKEDIR_LOWERCASE=c:\projects\headsetpresenter_bluetools\headsetpresenter\usbsnoop\2.0
+OBJ_PATH=c:\projects\headsetpresenter_bluetools\headsetpresenter\usbsnoop\2.0

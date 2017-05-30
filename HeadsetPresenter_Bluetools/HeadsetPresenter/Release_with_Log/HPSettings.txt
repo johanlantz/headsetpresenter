@@ -1,0 +1,13 @@
+Log=0
+DeviceName=Jabra BT500v
+DeviceAddress=(00:13:17:28:93:08)
+ServiceName=Headset
+SCN=1
+ForceVGS=0
+LastUsedApplicationName=PowerPoint Slide Show
+ForwardOnly=1
+LastControllerMode=8
+LastReplugMode=0
+StackName=1
+OSId=16
+LastControllerName=T500v

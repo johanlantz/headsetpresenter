@@ -1,0 +1,46 @@
+// LicenseManager.idl : IDL source for LicenseManager
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (LicenseManager.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0246D106-5CB9-4e75-8333-05FED161D9B1),
+	dual,
+	nonextensible,
+	helpstring("ILicenseHandler Interface"),
+	pointer_default(unique)
+]
+interface ILicenseHandler : IDispatch{
+	[propget, id(1), helpstring("property status")] HRESULT status([out, retval] LONG* pVal);
+	[id(2), helpstring("method CheckLicense")] HRESULT CheckLicense([in] BSTR productName, [in] BSTR productVersion, [out,retval] BSTR* resultAsString);
+	[id(3), helpstring("method CreateLicFile")] HRESULT CreateLicFile([in] BSTR productName,[in] BSTR productVersion, [out,retval] BSTR* statusAsString);
+	[id(4), helpstring("method AllowAnyValidLicenseVersion")] HRESULT AllowAnyValidLicenseVersion(void);
+	[id(5), helpstring("method QueryForEmail")] HRESULT QueryForEmail(void);
+	[id(6), helpstring("method SetRegistrationComment")] HRESULT SetRegistrationComment([in] BSTR iregistrationComment);
+	[id(7), helpstring("method CRCCheckSelf")] HRESULT CRCCheckSelf([in] BSTR fullPathToApplication, [in] BSTR fullPathToNonAppendedCRC, [out,retval] BSTR* resultAsString);
+	[id(8), helpstring("method SetMinVersionAllowed")] HRESULT SetMinVersionAllowed([in] DOUBLE minVersionAllowed, [out,retval] BSTR* resultAsString);
+	[id(9), helpstring("method Authenticate")] HRESULT Authenticate([in] INT challenge, [out,retval] INT* response);
+	[id(10), helpstring("method Activate")] HRESULT Activate([in] INT secretKey);
+};
+[
+	uuid(4BCB7266-E019-40f0-87EC-172879C9920D),
+	version(2.0),
+	helpstring("LicenseManager 2.0 Type Library")
+]
+library LicenseManagerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(08DE6FB7-8068-457f-BD7F-C63F647177D9),
+		helpstring("LicenseHandler Class")
+	]
+	coclass LicenseHandler
+	{
+		[default] interface ILicenseHandler;
+	};
+};
