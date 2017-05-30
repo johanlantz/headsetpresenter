@@ -5,14 +5,14 @@ This is a very old project I did between 2001 and 2008 which I added to github i
 
 HeadsetPresenter started out as an idea to control PowerPoint presentations using the buttons on Bluetooth headsets.
 
-The project proved quite challenging given the massive fragmentation of Bluetooth drivers. The solution finally supported the following stacks:
+The project proved quite challenging given the massive fragmentation of Bluetooth drivers and it finally supported the following stacks:
 * Microsoft Windows Bluetooth stack introduced in Vista
 * Bluesolei
 * Widcomm
 * Toshiba
 * and a custom solution adding a USB sniffer filter on the Bluetooth driver intercepting the ACL commands.
 
-Later releases supported controlling bascially any application and in the last release voice control was also added. The application was very well received but I stopped updating it due to lack of time.
+Later releases supported controlling basically any application and in the last release voice control was also added. The application was very well received but I stopped updating it due to lack of time.
 
 In the reposition is also the code for a custom software based License Management system based on ATL/COM and C++ that I developed for the HeadsetPresenter project. 
 
