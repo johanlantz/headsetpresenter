@@ -12,6 +12,8 @@ The project proved quite challenging given the massive fragmentation of Bluetoot
 * Toshiba
 * and a custom solution adding a USB sniffer filter on the Bluetooth driver intercepting the ACL commands.
 
-In the last release voice control was also added. The application was very well received but I stopped updating it due to lack of time.
+Later releases supported controlling bascially any application and in the last release voice control was also added. The application was very well received but I stopped updating it due to lack of time.
 
-In the reposition is also the code for a custom software based License Management system based on ATL/COM and C++ that I developed for the HeadsetPresenter project. It was capable of managing encrypted license keys controlled by a web backend as well as performing custom CRC checks to avoid tampering. It was used in other projects as well and since it was COM based it was pretty much language independent. At least one project that I am aware of used LISP for licensing an Autocad plugin..
+In the reposition is also the code for a custom software based License Management system based on ATL/COM and C++ that I developed for the HeadsetPresenter project. 
+
+It was capable of managing encrypted license keys controlled by a web backend as well as performing custom CRC checks to avoid tampering. It was used in other projects as well and since it was COM based it was pretty much language independent. At least one project that I am aware of used LISP for licensing an Autocad plugin..
