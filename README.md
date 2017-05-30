@@ -1,4 +1,4 @@
-# headsetpresenter
+# HeadsetPresenter
 Legacy project for controlling presentations etc using a bluetooth headset. The code is not cleaned up but in theory it should compile fine using Visual Studio 6.0 (or a newer version given that the solution files converts ok).
 
 This is a very old project I did between 2001 and 2008 which I added to github in 2017 so the code would not get lost.
